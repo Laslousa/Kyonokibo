@@ -1,0 +1,59 @@
+.settings-shell {
+  width: 100%;
+  max-width: none;
+  padding: 34px 44px 160px;
+}
+
+.settings-card {
+  width: min(100%, 800px);
+  margin: 0 auto;
+  padding: 32px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.settings-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #e0edfb;
+  box-shadow: 0 8px 18px rgba(74, 144, 226, 0.18);
+}
+
+.settings-username {
+  margin: 0;
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #1f3b63;
+}
+
+.settings-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.settings-button-secondary {
+  background: rgb(224, 33, 33);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.settings-buttons-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 14px;
+
+}
+
+.settings-button{
+  width: 300px;
+  font-size: 2rem;
+}
+

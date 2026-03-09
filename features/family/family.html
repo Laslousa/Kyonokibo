@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kyōnokibō - Famille</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="family.css" />
+    <script src="../../script.js" defer></script>
+    <script src="family.js" defer></script>
+  </head>
+  <body class="with-bottom-nav family-page">
+    <main class="app-shell">
+      <header class="page-header">
+        <h1>Ta famille</h1>
+      </header>
+
+      <section class="family-grid">
+        <article class="family-card">
+          <img class="family-photo" src="../../public/images/image-fille.png" alt="Photo de Sophie" />
+          <p class="family-name">Sophie</p>
+          <p class="family-role">Ta fille</p>
+        </article>
+
+        <article class="family-card">
+          <img class="family-photo" src="../../public/images/image-fils.png" alt="Photo de Marc" />
+          <p class="family-name">Marc</p>
+          <p class="family-role">Ton fils</p>
+        </article>
+
+        <article class="family-card">
+          <img class="family-photo" src="../../public/images/image-epouse.png" alt="Photo de ton épouse" />
+          <p class="family-name">Claire</p>
+          <p class="family-role">Ton épouse</p>
+        </article>
+
+        <article class="family-card">
+          <img class="family-photo" src="../../public/images/image-petit-fils.png" alt="Photo de ton petit-fils" />
+          <p class="family-name">Lucas</p>
+          <p class="family-role">Ton petit-fils</p>
+        </article>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navigation basse">
+      <button class="bottom-nav-item" data-nav="../home/home.html">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label">Accueil</span>
+      </button>
+      <button class="bottom-nav-item" data-nav="../calendar/calendar.html">
+        <span class="nav-icon">📅</span>
+        <span class="nav-label">Calendrier</span>
+      </button>
+      <button class="bottom-nav-item" data-nav="../quiz/quiz.html">
+        <span class="nav-icon">🧠</span>
+        <span class="nav-label">Quiz</span>
+      </button>
+      <button class="bottom-nav-item active" data-nav="family.html" aria-current="page">
+        <span class="nav-icon">👨‍👩‍👦</span>
+        <span class="nav-label">Famille</span>
+      </button>
+      <button class="bottom-nav-item" data-nav="../settings/settings.html">
+        <span class="nav-icon">⚙️</span>
+        <span class="nav-label">Paramètres</span>
+      </button>
+    </nav>
+  </body>
+</html>

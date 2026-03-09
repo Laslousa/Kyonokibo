@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kyōnokibō - Calendrier</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="calendar.css" />
+    <script src="../../script.js" defer></script>
+    <script src="calendar.js" defer></script>
+  </head>
+  <body class="with-bottom-nav calendar-page">
+    <main class="app-shell">
+      <header class="page-header">
+        <h1>Calendrier</h1>
+      </header>
+
+      <section class="calendar-layout" aria-label="Vue calendrier">
+        <section class="calendar-events-panel section-block">
+          <h2 id="selected-day-title"></h2>
+          <div id="selected-day-events" class="calendar-events-list"></div>
+        </section>
+
+        <section class="calendar-month-panel section-block">
+          <h2 id="month-title"></h2>
+
+          <div class="calendar-weekdays" aria-hidden="true">
+            <span>Dim</span>
+            <span>Lun</span>
+            <span>Mar</span>
+            <span>Mer</span>
+            <span>Jeu</span>
+            <span>Ven</span>
+            <span>Sam</span>
+          </div>
+
+          <div id="month-grid" class="calendar-month-grid" aria-label="Jours du mois"></div>
+        </section>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navigation basse">
+      <button class="bottom-nav-item" data-nav="../home/home.html">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label">Accueil</span>
+      </button>
+      <button class="bottom-nav-item active" data-nav="calendar.html" aria-current="page">
+        <span class="nav-icon">📅</span>
+        <span class="nav-label">Calendrier</span>
+      </button>
+      <button class="bottom-nav-item" data-nav="../quiz/quiz.html">
+        <span class="nav-icon">🧠</span>
+        <span class="nav-label">Quiz</span>
+      </button>
+      <button class="bottom-nav-item" data-nav="../family/family.html">
+        <span class="nav-icon">👨‍👩‍👦</span>
+        <span class="nav-label">Famille</span>
+      </button>
+      <button class="bottom-nav-item" data-nav="../settings/settings.html">
+        <span class="nav-icon">⚙️</span>
+        <span class="nav-label">Paramètres</span>
+      </button>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+﻿:root {
+  --bg: #f6f8fa;
+  --primary: #4a90e2;
+  --soft-green: #6fcf97;
+  --text: #333333;
+  --card: #ffffff;
+  --shadow: 0 10px 26px rgba(74, 144, 226, 0.12);
+  --radius: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #ecf5ff 0%, var(--bg) 55%);
+  font-family: "Trebuchet MS", "Gill Sans", "Segoe UI", sans-serif;
+  color: var(--text);
+  font-size: 28px;
+  line-height: 1.4;
+  zoom: 0.8;
+}
+
+.app-shell {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 30px 30px 42px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 5rem;
+  text-align: center;
+  color: #1f3b63;
+}
+
+.section-block {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.section-block h2 {
+  margin: 0 0 18px;
+  font-size: 2rem;
+  color: #1f3b63;
+}
+
+.event-card {
+  border-radius: 20px;
+  border: 2px solid #e5eef9;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  background: #fbfdff;
+  box-shadow: 0 8px 20px rgba(74, 144, 226, 0.1);
+}
+
+.event-card:last-child {
+  margin-bottom: 0;
+}
+
+.event-time {
+  font-size: 1em;
+  margin: 0;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.event-title {
+  font-size: 1.1em;
+  margin: 6px 0 0;
+  font-weight: 700;
+}
+
+.event-place {
+  font-size: 1em;
+  margin: 4px 0 0;
+  color: #4d5f73;
+}
+
+.event-description-title {
+  font-size: 1.1em;
+  margin: 12px 0 4px;
+  font-weight: 700;
+}
+
+.event-description {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #4d5f73;
+}
+
+.action-button {
+  width: 100%;
+  min-height: 88px;
+  border: 0;
+  border-radius: 18px;
+  background: var(--primary);
+  color: #ffffff;
+  font: inherit;
+  font-size: 1.18rem;
+  font-weight: 700;
+  padding: 10px 16px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 7px 20px rgba(74, 144, 226, 0.24);
+}
+
+.action-button:focus-visible,
+.bottom-nav-item:focus-visible {
+  outline: 4px solid var(--soft-green);
+  outline-offset: 2px;
+}
+
+.with-bottom-nav .app-shell {
+  padding-bottom: 150px;
+}
+
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 116px;
+  background: #ffffff;
+  border-top: 3px solid #dde9f6;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 10px 100px;
+  z-index: 50;
+}
+
+.bottom-nav-item {
+  border: 0;
+  border-radius: 16px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.bottom-nav-item .nav-icon {
+  font-size: 2.5rem;
+}
+
+.bottom-nav-item .nav-label {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.bottom-nav-item.active {
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(74, 144, 226, 0.28);
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kyōnokibō - Paramètres</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="settings.css" />
+    <script src="../../script.js" defer></script>
+    <script src="settings.js" defer></script>
+  </head>
+  <body class="with-bottom-nav">
+    <main class="app-shell settings-shell">
+      <header class="page-header">
+        <h1>Paramètres</h1>
+      </header>
+
+      <section class="section-block settings-card" aria-label="Profil utilisateur">
+        <img class="settings-avatar" src="../../public/images/image-jean.png" alt="Photo de profil de Jean Dupont" />
+        <p class="settings-username">Jean Dupont</p>
+
+        <div class="settings-actions">
+          <div class="settings-buttons-container">
+          <button type="button" class="action-button settings-button">Modifier le profil</button>
+          <button type="button" class="action-button settings-button settings-button-secondary">Se déconnecter</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navigation basse">
+      <button class="bottom-nav-item" data-nav="../home/home.html">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label">Accueil</span>
+      </button>
+      <button class="bottom-nav-item" data-nav="../calendar/calendar.html">
+        <span class="nav-icon">📅</span>
+        <span class="nav-label">Calendrier</span>
+      </button>
+      <button class="bottom-nav-item" data-nav="../quiz/quiz.html">
+        <span class="nav-icon">🧠</span>
+        <span class="nav-label">Quiz</span>
+      </button>
+      <button class="bottom-nav-item" data-nav="../family/family.html">
+        <span class="nav-icon">👨‍👩‍👦</span>
+        <span class="nav-label">Famille</span>
+      </button>
+      <button class="bottom-nav-item active" data-nav="../../settings.html" aria-current="page">
+        <span class="nav-icon">⚙️</span>
+        <span class="nav-label">Paramètres</span>
+      </button>
+    </nav>
+  </body>
+</html>

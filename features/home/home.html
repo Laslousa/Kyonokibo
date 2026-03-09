@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kyōnokibō - Accueil</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="home.css" />
+    <script src="../../script.js" defer></script>
+    <script src="home.js" defer></script>
+  </head>
+  <body class="home-page">
+    <main class="app-shell home-layout">
+      <section class="home-left">
+        <header class="page-header home-header">
+          <h1>Bonjour Jean</h1>
+        </header>
+
+        <section class="home-status-grid" aria-label="Informations du jour">
+          <article class="status-glass-card">
+            <p class="status-card-value" id="current-weekday">Samedi</p>
+          </article>
+          <article class="status-glass-card">
+            <p class="status-card-value" id="current-day-month">7 mars</p>
+          </article>
+          <article class="status-glass-card">
+            <p class="status-card-value" id="current-time">14:13</p>
+          </article>
+          <article class="status-glass-card">
+            <p class="status-card-value" id="current-location">Lieu actuel : À la maison</p>
+          </article>
+        </section>
+      </section>
+
+      <section class="home-right section-block">
+        <h2>Aujourd'hui</h2>
+
+        <article class="event-card" data-start="11:00" data-location="Cabinet Dr Lefèvre">
+          <p class="event-time">11:00</p>
+          <p class="event-title">Rendez-vous médecin</p>
+          <p class="event-place">Cabinet Dr Lefèvre</p>
+          <p class="event-description-title">Description :</p>
+          <p class="event-description">
+            Votre fille Sophie va vous accompagner et vous achètera votre glace favorite après le rendez-vous.
+          </p>
+        </article>
+
+        <article class="event-card" data-start="13:00" data-location="Salle à manger">
+          <p class="event-time">13:00</p>
+          <p class="event-title">Déjeuner</p>
+          <p class="event-place">Salle à manger</p>
+          <p class="event-description-title">Description :</p>
+          <p class="event-description">
+            Déjeuner calme à la maison avec votre repas préféré et un moment musique après le repas.
+          </p>
+        </article>
+
+        <article class="event-card" data-start="16:00" data-location="Salon">
+          <p class="event-time">16:00</p>
+          <p class="event-title">Appel avec Marc</p>
+          <p class="event-place">Salon</p>
+          <p class="event-description-title">Description :</p>
+          <p class="event-description">
+            Marc vous appellera en visio pour partager des nouvelles de la famille et regarder des photos ensemble.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navigation basse">
+      <button class="bottom-nav-item active" data-nav="../home/home.html" aria-current="page">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label">Accueil</span>
+      </button>
+      <button class="bottom-nav-item" data-nav="../calendar/calendar.html">
+        <span class="nav-icon">📅</span>
+        <span class="nav-label">Calendrier</span>
+      </button>
+      <button class="bottom-nav-item" data-nav="../quiz/quiz.html">
+        <span class="nav-icon">🧠</span>
+        <span class="nav-label">Quiz</span>
+      </button>
+      <button class="bottom-nav-item" data-nav="../family/family.html">
+        <span class="nav-icon">👨‍👩‍👦</span>
+        <span class="nav-label">Famille</span>
+      </button>
+      <button class="bottom-nav-item" data-nav="../settings/settings.html">
+        <span class="nav-icon">⚙️</span>
+        <span class="nav-label">Paramètres</span>
+      </button>
+    </nav>
+  </body>
+</html>
