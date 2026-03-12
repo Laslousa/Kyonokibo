@@ -8,7 +8,56 @@
 </head>
 <body>
   <main class="app-shell">
-    <div id="app"></div>
+    <div class="stack">
+      <div class="panel header-card">
+        <div>
+          <div class="eyebrow">Repere du jour</div>
+          <h1 class="title">Bonjour Jean,<br>Jeudi 12 mars</h1>
+        </div>
+        <div class="time-badge">
+          <div class="time-num">12h00</div>
+          <div class="time-date">12 mars</div>
+        </div>
+        <button class="speak-btn" type="button" title="Lecture vocale">Audio</button>
+      </div>
+
+      <div class="panel section-card">
+        <h2 class="section-title">Prochain rendez-vous</h2>
+        <div class="appt-layout">
+          <div>
+            <div class="tag urgent">
+              <span class="tag-dot"></span>
+              <span>AUJOURD'HUI - 12:00</span>
+            </div>
+            <div class="appt-title">Rendez-vous medecin</div>
+            <div class="appt-location">Lieu: Cabinet Dr Lefevre</div>
+            <div class="note-box">
+              <div class="note-label">Note</div>
+              <div class="note-text">Votre fille Sophie va vous accompagner et vous achetera votre glace favorite apres le rendez-vous.</div>
+            </div>
+          </div>
+          <div class="avatar-stack">
+            <div class="avatar" style="width:80px;height:80px;background:linear-gradient(135deg, #B39BC8, #B39BC8BB);font-size:32px;box-shadow:0 4px 16px #B39BC855">S</div>
+            <div class="avatar-label">Sophie</div>
+            <div class="arrow-row">
+              <button class="icon-btn" type="button" disabled>&lt;</button>
+              <button class="icon-btn" type="button">&gt;</button>
+            </div>
+          </div>
+        </div>
+        <div class="dot-row">
+          <span class="dot-toggle active"></span>
+          <span class="dot-toggle"></span>
+        </div>
+        <div class="contact-bar">
+          <div class="contact-icon">Tel</div>
+          <div class="contact-text">
+            Besoin d'aide ?
+            <span class="contact-phone">07 23 45 67 89</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <nav class="bottom-nav" aria-label="Navigation principale">
     <a class="nav-item active" href="home.html">
@@ -24,6 +73,6 @@
       <span class="nav-label">Quiz</span>
     </a>
   </nav>
-  <script src="home.js"></script>
+  <script src="nav.js"></script>
 </body>
 </html>

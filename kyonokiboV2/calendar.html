@@ -8,7 +8,79 @@
 </head>
 <body>
   <main class="app-shell">
-    <div id="app"></div>
+    <div class="stack">
+      <div class="calendar-header">
+        <div class="eyebrow">Votre planning</div>
+        <h1 class="title">Calendrier</h1>
+      </div>
+
+      <div class="week-nav">
+        <button class="icon-btn" type="button">&lt;</button>
+        <div>
+          <div class="week-label">mars 2026</div>
+        </div>
+        <button class="icon-btn" type="button">&gt;</button>
+      </div>
+
+      <div class="day-strip">
+        <button class="day-pill" type="button">
+          <div class="day-abbr">Lun</div>
+          <div class="day-num">9</div>
+          <div class="day-dot" style="background:transparent"></div>
+        </button>
+        <button class="day-pill" type="button">
+          <div class="day-abbr">Mar</div>
+          <div class="day-num">10</div>
+          <div class="day-dot" style="background:#6A96C8"></div>
+        </button>
+        <button class="day-pill" type="button">
+          <div class="day-abbr">Mer</div>
+          <div class="day-num">11</div>
+          <div class="day-dot" style="background:transparent"></div>
+        </button>
+        <button class="day-pill selected today" type="button">
+          <div class="day-abbr">Jeu</div>
+          <div class="day-num">12</div>
+          <div class="day-dot" style="background:rgba(255,255,255,0.7)"></div>
+        </button>
+        <button class="day-pill" type="button">
+          <div class="day-abbr">Ven</div>
+          <div class="day-num">13</div>
+          <div class="day-dot" style="background:#9DBFA3"></div>
+        </button>
+        <button class="day-pill" type="button">
+          <div class="day-abbr">Sam</div>
+          <div class="day-num">14</div>
+          <div class="day-dot" style="background:transparent"></div>
+        </button>
+        <button class="day-pill" type="button">
+          <div class="day-abbr">Dim</div>
+          <div class="day-num">15</div>
+          <div class="day-dot" style="background:#C4A882"></div>
+        </button>
+      </div>
+
+      <div class="detail-block">
+        <div class="detail-heading">
+          <div class="detail-title">Jeudi</div>
+          <span class="today-chip">Aujourd'hui</span>
+        </div>
+        <div class="detail-date">12 mars 2026</div>
+        <div class="appointment-card">
+          <div class="appointment-stripe" style="background:#E07840"></div>
+          <div class="appointment-time" style="color:#E07840">12:00</div>
+          <div class="appointment-divider"></div>
+          <div>
+            <div><strong>Rendez-vous medecin</strong></div>
+            <div class="appt-location">Lieu: Cabinet Dr Lefevre</div>
+          </div>
+          <div class="avatar-stack">
+            <div class="avatar" style="width:44px;height:44px;background:linear-gradient(135deg, #E07840, #E07840BB);font-size:18px;box-shadow:0 4px 16px #E0784055">S</div>
+            <div class="avatar-label" style="color:#E07840">Sophie</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <nav class="bottom-nav" aria-label="Navigation principale">
     <a class="nav-item" href="home.html">
@@ -24,6 +96,6 @@
       <span class="nav-label">Quiz</span>
     </a>
   </nav>
-  <script src="calendar.js"></script>
+  <script src="nav.js"></script>
 </body>
 </html>

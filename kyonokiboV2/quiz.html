@@ -8,7 +8,56 @@
 </head>
 <body>
   <main class="app-shell">
-    <div id="app"></div>
+    <div class="stack">
+      <div class="quiz-header">
+        <div class="eyebrow">Exercice du jour</div>
+        <h1 class="title">Entrainement memoire</h1>
+        <div class="subtitle">Prenez votre temps. Faites confiance a votre instinct.</div>
+      </div>
+
+      <div>
+        <div class="progress-row">
+          <div>Question 1 sur 4</div>
+          <div class="score-pill">0 bonne</div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-dot" style="background:#E8EFF5"></div>
+          <div class="progress-dot" style="background:#E8EFF5"></div>
+          <div class="progress-dot" style="background:#E8EFF5"></div>
+          <div class="progress-dot" style="background:#E8EFF5"></div>
+        </div>
+      </div>
+
+      <div class="panel quiz-card">
+        <div class="category-bar" style="background:#EEF5FF">
+          <div class="category-pill" style="background:#7BA7BC22;color:#7BA7BC;border:1px solid #7BA7BC44">Personnes</div>
+          <div class="hint">Choisissez la meilleure reponse</div>
+        </div>
+        <div class="question-layout">
+          <div class="question-image">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&amp;h=400&amp;fit=crop&amp;crop=face" alt="Question">
+          </div>
+          <div class="question-copy">
+            <div class="question-text">Qui pourrait etre cette personne dans votre vie ?</div>
+            <div class="hint">Regardez bien le visage et faites confiance a votre instinct.</div>
+          </div>
+        </div>
+        <div class="answers">
+          <button class="answer-btn" type="button" style="background:#ffffff;border-color:#EDF0F5;color:#2D3748">
+            <span class="answer-badge" style="background:#EEF5FF;color:#7BA7BC">A</span>
+            <span>Un membre de la famille</span>
+          </button>
+          <button class="answer-btn" type="button" style="background:#ffffff;border-color:#EDF0F5;color:#2D3748">
+            <span class="answer-badge" style="background:#EEF5FF;color:#7BA7BC">B</span>
+            <span>Un chauffeur de taxi</span>
+          </button>
+          <button class="answer-btn" type="button" style="background:#ffffff;border-color:#EDF0F5;color:#2D3748">
+            <span class="answer-badge" style="background:#EEF5FF;color:#7BA7BC">C</span>
+            <span>Une caissiere</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </main>
   <nav class="bottom-nav" aria-label="Navigation principale">
     <a class="nav-item" href="home.html">
@@ -24,6 +73,6 @@
       <span class="nav-label">Quiz</span>
     </a>
   </nav>
-  <script src="quiz.js"></script>
+  <script src="nav.js"></script>
 </body>
 </html>
