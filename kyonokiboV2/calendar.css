@@ -57,7 +57,7 @@ a {
 .title {
   margin: 6px 0 0;
   font-family: var(--serif);
-  font-size: 40px;
+  font-size: 60px;
   line-height: 1.1;
 }
 
@@ -75,7 +75,7 @@ a {
 }
 
 .week-label {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
   text-transform: capitalize;
 }
@@ -171,12 +171,12 @@ a {
 
 .detail-title {
   font-family: var(--serif);
-  font-size: 30px;
+  font-size: 36px;
 }
 
 .detail-date {
   color: var(--muted);
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .today-chip {
@@ -184,7 +184,7 @@ a {
   border-radius: 999px;
   color: #fff;
   background: linear-gradient(135deg, var(--orange), #f0a171);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -202,7 +202,7 @@ a {
 }
 
 .appointment-stripe {
-  height: 80px;
+  height: 120px;
   position: absolute;
   left: 0;
   top: 50%;
