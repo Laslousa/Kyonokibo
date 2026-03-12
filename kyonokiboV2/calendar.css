@@ -192,10 +192,10 @@ a {
 .appointment-card {
   position: relative;
   margin-top: 14px;
-  padding: 20px 22px 20px 28px;
+  padding: 14px 18px 12px 24px;
   display: grid;
   grid-template-columns: auto auto 1fr auto;
-  gap: 16px;
+  gap: 12px;
   align-items: center;
   background: #fff;
   border-radius: 24px;
@@ -203,14 +203,14 @@ a {
 }
 
 .appointment-stripe {
+  height: 54px;
   position: absolute;
   left: 0;
-  top: 0;
-  bottom: 0;
-  width: 5px;
-  border-radius: 24px 0 0 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  border-radius: 1000px;
 }
-
 .appointment-time {
   min-width: 68px;
   font-family: var(--serif);
@@ -220,12 +220,25 @@ a {
 
 .appointment-divider {
   width: 1px;
-  height: 48px;
+  height: 40px;
   background: var(--line);
 }
 
 .appt-location {
   color: var(--muted);
+}
+
+.appointment-more {
+  grid-column: 1 / -1;
+  margin-top: 2px;
+  padding-top: 2px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
 }
 
 .avatar-stack {
