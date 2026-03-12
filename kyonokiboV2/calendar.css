@@ -47,7 +47,7 @@ a {
 }
 
 .eyebrow {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -57,7 +57,8 @@ a {
 .title {
   margin: 6px 0 0;
   font-family: var(--serif);
-  font-size: 32px;
+  font-size: 40px;
+  line-height: 1.1;
 }
 
 .calendar-header {
@@ -68,13 +69,13 @@ a {
 .week-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 12px;
   margin: 18px 0 16px;
 }
 
 .week-label {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   text-transform: capitalize;
 }
@@ -137,7 +138,7 @@ a {
 }
 
 .day-abbr {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--muted);
 }
@@ -150,15 +151,12 @@ a {
 .day-num {
   margin-top: 6px;
   font-family: var(--serif);
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 700;
 }
 
 .day-dot {
-  width: 6px;
-  height: 6px;
-  margin: 8px auto 0;
-  border-radius: 999px;
+  display: none;
 }
 
 .detail-block {
@@ -173,11 +171,12 @@ a {
 
 .detail-title {
   font-family: var(--serif);
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .detail-date {
   color: var(--muted);
+  font-size: 15px;
 }
 
 .today-chip {
@@ -185,7 +184,7 @@ a {
   border-radius: 999px;
   color: #fff;
   background: linear-gradient(135deg, var(--orange), #f0a171);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -203,7 +202,7 @@ a {
 }
 
 .appointment-stripe {
-  height: 54px;
+  height: 80px;
   position: absolute;
   left: 0;
   top: 50%;
@@ -214,8 +213,14 @@ a {
 .appointment-time {
   min-width: 68px;
   font-family: var(--serif);
-  font-size: 28px;
+  font-size: 36px;
   font-weight: 700;
+}
+
+.appt-title {
+  font-family: var(--serif);
+  font-size: 34px;
+  line-height: 1.1;
 }
 
 .appointment-divider {
@@ -226,16 +231,16 @@ a {
 
 .appt-location {
   color: var(--muted);
+  font-size: 16px;
+  margin-top: 5px;
 }
 
 .appointment-more {
   grid-column: 1 / -1;
-  margin-top: 2px;
-  padding-top: 2px;
   border: 0;
   background: transparent;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   text-align: center;
   cursor: pointer;
@@ -245,22 +250,34 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .avatar {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 15%;
   color: #fff;
   font-family: var(--serif);
   font-weight: 700;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15%;
 }
 
 .avatar-label {
-  font-size: 13px;
+  font-size: 20px;
   font-weight: 600;
+  color: var(--blue);
+  margin-top: 5px;
+  margin-right: 10px;
 }
 
 .empty-state {
@@ -327,11 +344,11 @@ a {
 }
 
 .nav-icon {
-  font-size: 22px;
+  font-size: 28px;
 }
 
 .nav-label {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
 }
 
