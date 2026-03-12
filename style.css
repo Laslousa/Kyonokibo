@@ -48,7 +48,7 @@ body {
 
 .section-block h2 {
   margin: 0 0 18px;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #1f3b63;
 }
 
@@ -167,4 +167,45 @@ body {
   background: var(--primary);
   color: #ffffff;
   box-shadow: 0 8px 18px rgba(74, 144, 226, 0.28);
+}
+
+/* ── Responsive globals ─────────────────────────────────── */
+@media (max-width: 900px) {
+  body {
+    font-size: 22px;
+  }
+
+  .page-header h1 {
+    font-size: 3.5rem;
+  }
+
+  .bottom-nav {
+    padding: 8px 20px;
+    gap: 8px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+
+  .page-header h1 {
+    font-size: 2.4rem;
+  }
+
+  .bottom-nav {
+    padding: 6px 8px;
+    gap: 4px;
+    height: 90px;
+  }
+
+  .bottom-nav-item .nav-icon {
+    font-size: 1.8rem;
+  }
+
+  .bottom-nav-item .nav-label {
+    font-size: 1rem;
+  }
 }

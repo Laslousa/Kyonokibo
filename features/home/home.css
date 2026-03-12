@@ -9,7 +9,6 @@
   margin: 0;
   padding: 36px 44px 24px;
   height: calc(100vh - 116px);
-  display: grid;
   grid-template-columns: minmax(420px, 38%) minmax(0, 1fr);
   gap: 40px;
   align-items: stretch;
@@ -17,14 +16,36 @@
 
 .home-left {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(155deg, #ddeeff 0%, #eaf5fb 55%, #f0f7ff 100%);
+  border-radius: var(--radius, 24px);
+  box-shadow: 0 8px 32px rgba(74, 144, 226, 0.13);
+  padding: 44px 32px;
   gap: 26px;
+}
+
+.audio-control {
+  font-size: 50px;
+  position: absolute;
+  right: 4.5rem;
+  border: rgba(13, 111, 191, 0.582) solid 4px;
+  border-radius: 50%;
+  width: 5.5rem;
+  height: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .home-header h1 {
   text-align: center;
-  font-size: 6.2rem;
+  font-size: 3.6rem;
   color: #1f3b63;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  z-index: 1;
 }
 
 .home-status-grid {
@@ -35,8 +56,110 @@
 }
 
 .home-right {
-  overflow-y: auto;
-  padding: 28px;
+  padding: 28px 28px 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-right h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #e5eef9;
+  margin-bottom: 20px;
+}
+
+.home-right h2::before {
+  content: '📋';
+  font-size: 1.5rem;
+}
+
+/* ── Event card: side-by-side layout ─────────────────────── */
+.event-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-left: 5px solid var(--primary, #4a90e2);
+  border-radius: 20px;
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.event-card:hover {
+  box-shadow: 0 12px 28px rgba(74, 144, 226, 0.18);
+  transform: translateY(-2px);
+}
+
+/* Time pill badge */
+.event-card .event-time {
+  display: inline-block;
+  background: var(--primary, #4a90e2);
+  color: #fff;
+  border-radius: 999px;
+  padding: 2px 16px;
+  font-size: 0.9em;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.event-card-info {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* ── Carousel ────────────────────────────────────────────── */
+.carousel {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.carousel-track {
+  width: 130px;
+  height: 130px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(74, 144, 226, 0.22);
+  border: 2px solid #d6e8f7;
+  background: #eaf3fb;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-prev,
+.carousel-next {
+  background: var(--primary, #4a90e2);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+  transition: background 0.15s, transform 0.1s;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background: #2c70c4;
+  transform: scale(1.08);
+}
+
+.carousel-prev:active,
+.carousel-next:active {
+  transform: scale(0.96);
 }
 
 .status-glass-card {
@@ -73,4 +196,26 @@
   font-size: 1.2em;
   font-weight: 900;
   color: #2c3e50;
+}
+
+/* ── Footer contact strip ────────────────────────────────── */
+.footer {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.footer p {
+  margin: 0;
+  padding: 12px 20px;
+  background: #eef5fd;
+  border-radius: 14px;
+  text-align: center;
+  color: #4d5f73;
+  font-size: 0.9em;
+  border: 1px solid #d6e8f7;
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.07);
+}
+
+.footer p::before {
+  content: '📞 ';
 }
