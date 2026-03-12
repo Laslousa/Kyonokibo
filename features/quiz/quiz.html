@@ -14,11 +14,10 @@
     <link rel="stylesheet" href="quiz.css" />
     <script src="../../script.js" defer></script>
   </head>
-  <body class="with-bottom-nav">
-    <main class="quiz-app">
+  <body class="with-bottom-nav quiz-page">
+    <main class="app-shell quiz-app">
       <div class="topbar">
         <div>
-          <p class="eyebrow">Gentle activity</p>
           <h1 class="title">Memory Practice</h1>
           <p class="intro" id="introText">
             Take your time. Choose the answer that feels right.
@@ -75,7 +74,11 @@
         <span class="nav-icon">📅</span>
         <span class="nav-label">Calendrier</span>
       </button>
-      <button class="bottom-nav-item active" data-nav="../quiz/quiz.html" aria-current="page">
+      <button
+        class="bottom-nav-item active"
+        data-nav="../quiz/quiz.html"
+        aria-current="page"
+      >
         <span class="nav-icon">🧠</span>
         <span class="nav-label">Quiz</span>
       </button>
