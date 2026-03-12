@@ -127,8 +127,8 @@
 }
 
 .carousel-track {
-  width: 130px;
-  height: 130px;
+  width: 240px;
+  height: 240px;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 4px 14px rgba(30, 58, 138, 0.22);
