@@ -1,1 +1,38 @@
-﻿
+.calendar-page .app-shell {
+  width: min(var(--content-max-width), calc(100% - 96px));
+  max-width: var(--content-max-width);
+}
+
+.calendar-page .page-header {
+  margin-bottom: 8px;
+}
+
+.calendar-page h2 {
+  width: min(100%, 1020px);
+  margin: 6px auto 14px;
+  padding: 0 4px 10px;
+  border-bottom: 2px solid var(--border-blue);
+  color: var(--primary-dark);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.calendar-page .event-card {
+  width: min(100%, 1020px);
+  margin: 0 auto 20px;
+}
+
+.calendar-page .event-card + .event-card {
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .calendar-page .app-shell {
+    width: min(var(--content-max-width), calc(100% - 40px));
+  }
+
+  .calendar-page h2,
+  .calendar-page .event-card {
+    width: 100%;
+  }
+}

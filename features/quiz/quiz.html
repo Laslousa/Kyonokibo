@@ -1,15 +1,70 @@
-﻿<!DOCTYPE html>
-<html lang="fr">
+﻿<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kyōnokibō - Quiz souvenir</title>
+    <title>Gentle Memory Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="quiz.css" />
     <script src="../../script.js" defer></script>
-    <script src="quiz.js" defer></script>
   </head>
   <body class="with-bottom-nav">
+    <main class="quiz-app">
+      <div class="topbar">
+        <div>
+          <p class="eyebrow">Gentle activity</p>
+          <h1 class="title">Memory Practice</h1>
+          <p class="intro" id="introText">
+            Take your time. Choose the answer that feels right.
+          </p>
+        </div>
+        <div class="step" id="stepIndicator" aria-live="polite">
+          Question 1 of 4
+        </div>
+      </div>
+
+      <div id="quizScreen" aria-labelledby="questionText">
+        <div class="question-card">
+          <p class="category-chip" id="categoryChip">Daily life</p>
+          <p class="question-text" id="questionText"></p>
+          <p class="question-help" id="questionHelp">
+            Look carefully at the picture, then choose one answer.
+          </p>
+
+          <div class="image-box">
+            <img id="questionImage" src="" alt="Quiz visual" />
+          </div>
+
+          <div
+            class="answers"
+            id="answersContainer"
+            role="group"
+            aria-label="Answer choices"
+          ></div>
+
+          <div class="feedback" id="feedbackBox" aria-live="polite"></div>
+
+          <div class="controls">
+            <button class="next-btn" id="nextBtn">Continue</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="score-screen" id="scoreScreen">
+        <h2 class="score-title">Session complete</h2>
+        <p class="score-text" id="scoreText"></p>
+        <p class="closing-note">
+          You can repeat the activity anytime for calm practice.
+        </p>
+        <button class="restart-btn" id="restartBtn">Start Again</button>
+      </div>
+    </main>
 
     <nav class="bottom-nav" aria-label="Navigation basse">
       <button class="bottom-nav-item" data-nav="../home/home.html">
@@ -20,7 +75,7 @@
         <span class="nav-icon">📅</span>
         <span class="nav-label">Calendrier</span>
       </button>
-      <button class="bottom-nav-item active" data-nav="quiz.html" aria-current="page">
+      <button class="bottom-nav-item active" data-nav="../quiz/quiz.html" aria-current="page">
         <span class="nav-icon">🧠</span>
         <span class="nav-label">Quiz</span>
       </button>
@@ -33,5 +88,7 @@
         <span class="nav-label">Paramètres</span>
       </button>
     </nav>
+
+    <script src="quiz.js" defer></script>
   </body>
 </html>
