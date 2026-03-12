@@ -146,7 +146,7 @@ a {
   gap: 10px;
   margin: 0 0 20px;
   font-family: var(--serif);
-  font-size: 26px;
+  font-size: 28px;
 }
 .breaker {
   margin-top: 20px;
@@ -286,6 +286,7 @@ a {
 }
 
 .contact-icon {
+  font-size: large;
   width: 36px;
   height: 36px;
   display: inline-flex;
