@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap");
 :root {
   --bg: #f5f0e8;
   --panel: #ffffff;
@@ -18,7 +19,8 @@
   --radius-md: 18px;
   --radius-sm: 14px;
   --serif: Baskerville, "Times New Roman", serif;
-  --sans: "Trebuchet MS", "Segoe UI", sans-serif;
+  /* --sans: "Trebuchet MS", "Segoe UI", sans-serif; */
+  --sans: "Roboto", "Segoe UI", sans-serif;
 }
 
 * {
