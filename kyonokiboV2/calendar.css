@@ -178,6 +178,19 @@ a {
 .detail-heading {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.detail-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.detail-title-row {
+  display: flex;
+  align-items: center;
   gap: 10px;
 }
 
@@ -189,6 +202,23 @@ a {
 .detail-date {
   color: var(--muted);
   font-size: 18px;
+}
+
+.add-event-btn {
+  border: 1px solid #3f8f45;
+  background: #4caf50;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(63, 143, 69, 0.28);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.add-event-btn:hover {
+  background: #459a49;
 }
 
 .today-chip {
