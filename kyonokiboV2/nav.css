@@ -58,15 +58,6 @@
   transform: translateY(-1px);
 }
 
-.nav-item-disabled {
-  opacity: 0.55;
-  cursor: default;
-}
-
-.nav-item-disabled:hover {
-  transform: none;
-}
-
 .nav-icon {
   font-size: 1.35rem;
   line-height: 1;
