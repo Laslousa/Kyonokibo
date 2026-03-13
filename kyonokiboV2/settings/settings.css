@@ -33,9 +33,26 @@ body {
 }
 
 body {
+  position: relative;
   font-family: var(--sans);
   color: var(--text);
-  background: url("../public/images/background3.png") center center / cover fixed no-repeat;
+  background: url("../public/images/background3.png") center center / cover
+    fixed no-repeat;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 240, 230, 0) 0%,
+    rgba(255, 240, 230, 0.08) 45%,
+    rgba(255, 240, 230, 0.22) 78%,
+    rgba(255, 240, 230, 0.42) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
 }
 
 button,
@@ -549,4 +566,3 @@ a {
     text-align: center;
   }
 }
-
