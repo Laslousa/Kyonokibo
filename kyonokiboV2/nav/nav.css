@@ -2,17 +2,18 @@
 
 .floating-nav {
   position: fixed;
-  bottom: 28px;
+  bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
-  max-width: 920px;
+  max-width: 1520px;
   z-index: 40;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 3px;
   padding: 8px 16px;
-  border-radius: 40px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -31,9 +32,9 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
-  padding: 10px 8px;
+  padding: 10px 2px;
   border: none;
-  border-radius: 28px;
+  border-radius: 8px;
   text-decoration: none;
   cursor: pointer;
   background: transparent;
@@ -47,13 +48,13 @@
 }
 
 .fnav-btn.active {
-  background: #3a7d5c;
+  background: #4caf50;
   color: #fff;
   box-shadow: 0 4px 14px rgba(58, 125, 92, 0.35);
 }
 
 .fnav-btn.active:hover {
-  background: #2e6b4d;
+  background: #329136;
 }
 
 .fnav-icon-wrap {
@@ -85,11 +86,11 @@
 }
 
 .fnav-label {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 700;
   letter-spacing: 0.01em;
   white-space: nowrap;
-  color: #9a9890;
+  color: #3d3c39a6;
 }
 
 .fnav-btn.active .fnav-label {
@@ -103,7 +104,7 @@
   right: -7px;
   width: 15px;
   height: 15px;
-  border-radius: 50%;
+  border-radius: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,7 +116,7 @@
   line-height: 1;
 }
 
-@keyframes fnav-pop-in {
+/* @keyframes fnav-pop-in {
   from {
     opacity: 0;
     transform: translateX(-50%) translateY(20px) scale(0.95);
@@ -125,7 +126,7 @@
     opacity: 1;
     transform: translateX(-50%) translateY(0) scale(1);
   }
-}
+} */
 
 @media (max-width: 720px) {
   .floating-nav {
