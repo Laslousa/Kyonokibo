@@ -137,6 +137,18 @@ a {
   border-color: transparent;
 }
 
+.day-pill.is-disabled {
+  background: #f1f4f6;
+  border-color: #d8e0e6;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.day-pill.is-disabled .day-abbr,
+.day-pill.is-disabled .day-num {
+  color: #a0aab3;
+}
+
 .day-abbr {
   font-size: 13px;
   font-weight: 600;
