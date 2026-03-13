@@ -1,87 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kyono Kibo - Quiz</title>
-  <link rel="stylesheet" href="quiz.css">
-  <link rel="stylesheet" href="nav.css">
-</head>
-<body>
-  <main class="app-shell">
-    <div class="stack">
-      <div class="quiz-header">
-        <div class="eyebrow">Exercice du jour</div>
-        <h1 class="title">Entrainement memoire</h1>
-        <div class="subtitle">Prenez votre temps. Faites confiance a votre instinct.</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz – Entraînement mémoire</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="quiz.css" />
+  </head>
+  <body>
+    <div class="main">
+      <!-- Top bar -->
+      <div class="topbar">
+        <div class="topbar-row">
+          <div>
+            <div class="eyebrow">🧠 Exercice du jour</div>
+            <div class="page-title">Entraînement<br />mémoire</div>
+          </div>
+          <div class="q-counter">1 / 4</div>
+        </div>
+
+        <!-- Progress bar -->
+        <div class="prog-track">
+          <div class="prog-fill"></div>
+        </div>
       </div>
 
-      <div>
-        <div class="progress-row">
-          <div>Question 1 sur 4</div>
-          <div class="score-pill">0 bonne</div>
+      <!-- Card -->
+      <div class="card">
+        <!-- Image -->
+        <div class="img-wrap">
+          <img src="./image-fille2.png" alt="Question photo" />
+          <div class="img-overlay"></div>
+          <div class="cat-chip">👤 Personnes</div>
         </div>
-        <div class="progress-bar">
-          <div class="progress-dot" style="background:#E8EFF5"></div>
-          <div class="progress-dot" style="background:#E8EFF5"></div>
-          <div class="progress-dot" style="background:#E8EFF5"></div>
-          <div class="progress-dot" style="background:#E8EFF5"></div>
-        </div>
-      </div>
 
-      <div class="panel quiz-card">
-        <div class="category-bar" style="background:#EEF5FF">
-          <div class="category-pill" style="background:#7BA7BC22;color:#7BA7BC;border:1px solid #7BA7BC44">Personnes</div>
-          <div class="hint">Choisissez la meilleure reponse</div>
-        </div>
-        <div class="question-layout">
-          <div class="question-image">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&amp;h=400&amp;fit=crop&amp;crop=face" alt="Question">
+        <!-- Question -->
+        <div class="q-section">
+          <div class="q-text">
+            Qui pourrait être cette personne dans votre vie&nbsp;?
           </div>
-          <div class="question-copy">
-            <div class="question-text">Qui pourrait etre cette personne dans votre vie ?</div>
-            <div class="hint">Regardez bien le visage et faites confiance a votre instinct.</div>
+          <div class="q-hint">
+            <span>💡</span>
+            <span>Prenez votre temps. Faites confiance à votre instinct.</span>
           </div>
         </div>
+
+        <!-- Answers -->
         <div class="answers">
-          <button class="answer-btn" type="button" style="background:#ffffff;border-color:#EDF0F5;color:#2D3748">
-            <span class="answer-badge" style="background:#EEF5FF;color:#7BA7BC">A</span>
-            <span>Un membre de la famille</span>
+          <!-- Correct answer (shown selected) -->
+          <button class="ans-btn correct">
+            <div class="ans-letter">✓</div>
+            Un membre de la famille
           </button>
-          <button class="answer-btn" type="button" style="background:#ffffff;border-color:#EDF0F5;color:#2D3748">
-            <span class="answer-badge" style="background:#EEF5FF;color:#7BA7BC">B</span>
-            <span>Un chauffeur de taxi</span>
+
+          <button class="ans-btn">
+            <div class="ans-letter">B</div>
+            Un chauffeur de taxi
           </button>
-          <button class="answer-btn" type="button" style="background:#ffffff;border-color:#EDF0F5;color:#2D3748">
-            <span class="answer-badge" style="background:#EEF5FF;color:#7BA7BC">C</span>
-            <span>Une caissiere</span>
+
+          <button class="ans-btn">
+            <div class="ans-letter">C</div>
+            Une caissière
           </button>
         </div>
+
+        <!-- Feedback -->
+        <div class="feedback">
+          <div class="fb-emoji">🎉</div>
+          <div>
+            <div class="fb-title">Bravo !</div>
+            <div class="fb-body">
+              C'est la bonne réponse. Votre mémoire est en forme !
+            </div>
+          </div>
+        </div>
+
+        <!-- Next button -->
+        <button class="next-btn">Question suivante →</button>
       </div>
+      <!-- /card -->
     </div>
-  </main>
-  <nav class="bottom-nav" aria-label="Navigation principale">
-    <a class="nav-item" href="home.html">
-      <span class="nav-icon">&#8962;</span>
-      <span class="nav-label">Accueil</span>
-    </a>
-    <a class="nav-item" href="calendar.html">
-      <span class="nav-icon">&#128197;</span>
-      <span class="nav-label">Calendrier</span>
-    </a>
-    <a class="nav-item active" href="quiz.html">
-      <span class="nav-icon">&#129504;</span>
-      <span class="nav-label">Quiz</span>
-    </a>
-    <a class="nav-item" href="family.html">
-      <span class="nav-icon">&#128106;</span>
-      <span class="nav-label">Famille</span>
-    </a>
-    <a class="nav-item" href="settings.html">
-      <span class="nav-icon">&#9881;</span>
-      <span class="nav-label">Parametres</span>
-    </a>
-  </nav>
-  <script src="nav.js"></script>
-</body>
+    <!-- /main -->
+
+    <!-- Bottom nav -->
+    <nav class="bottom-nav" aria-label="Navigation principale">
+      <a class="nav-item" href="home.html">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label">Accueil</span>
+      </a>
+      <a class="nav-item" href="calendar.html">
+        <span class="nav-icon">📅</span>
+        <span class="nav-label">Calendrier</span>
+      </a>
+      <a class="nav-item active" href="quiz.html" aria-current="page">
+        <span class="nav-icon">🧠</span>
+        <span class="nav-label">Quiz</span>
+      </a>
+      <a class="nav-item" href="family.html">
+        <span class="nav-icon">👨‍👩‍👧</span>
+        <span class="nav-label">Famille</span>
+      </a>
+      <a class="nav-item" href="settings.html">
+        <span class="nav-icon">⚙️</span>
+        <span class="nav-label">Paramètres</span>
+      </a>
+    </nav>
+    <script src="nav.js"></script>
+  </body>
 </html>
