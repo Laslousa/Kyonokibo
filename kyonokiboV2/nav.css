@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --nav-line: #e6edf2;
+  --nav-blue: #7ba7bc;
+  --nav-blue-strong: #5d8fae;
+  --nav-green: #9dbfa3;
+  --nav-muted: #afbdc6;
+}
+
+.bottom-nav {
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  background: rgba(255, 255, 255, 0.96);
+  border-top: 1px solid var(--nav-line);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 -4px 24px rgba(80, 80, 100, 0.08);
+}
+
+.nav-item {
+  flex: 1;
+  position: relative;
+  padding: 12px 8px 16px;
+  color: var(--nav-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  text-decoration: none;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  transition:
+    transform 150ms ease,
+    color 150ms ease,
+    opacity 150ms ease;
+}
+
+.nav-item.active {
+  color: var(--nav-blue-strong);
+}
+
+.nav-item.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 3px;
+  border-radius: 0 0 4px 4px;
+  background: linear-gradient(90deg, var(--nav-blue), var(--nav-green));
+}
+
+.nav-item:hover {
+  transform: translateY(-1px);
+}
+
+.nav-item-disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.nav-item-disabled:hover {
+  transform: none;
+}
+
+.nav-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.nav-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .nav-item {
+    padding: 11px 4px 15px;
+  }
+
+  .nav-icon {
+    font-size: 1.2rem;
+  }
+
+  .nav-label {
+    font-size: 0.64rem;
+  }
+}
