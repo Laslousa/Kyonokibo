@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap");
+
 :root {
   --bg: #f5f0e8;
   --text: #2d3748;
@@ -10,7 +12,7 @@
   --radius-lg: 28px;
   --radius-md: 18px;
   --serif: Baskerville, "Times New Roman", serif;
-  --sans: "Trebuchet MS", "Segoe UI", sans-serif;
+  --sans: "Roboto", "Segoe UI", sans-serif;
 }
 
 * {
@@ -95,9 +97,9 @@ a {
 }
 
 .eyebrow {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--green);
   margin-bottom: 6px;
@@ -106,12 +108,12 @@ a {
 .title {
   margin: 0 0 6px;
   font-family: var(--serif);
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 700;
 }
 
 .subtitle {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
 }
 
@@ -222,14 +224,14 @@ a {
 
 .card-name {
   font-family: var(--serif);
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   margin-bottom: 3px;
   text-align: center;
 }
 
 .role-pill {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   border-radius: 100px;
   padding: 3px 12px;
@@ -237,7 +239,7 @@ a {
 }
 
 .card-note {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
   text-align: center;
   line-height: 1.4;
@@ -256,7 +258,7 @@ a {
   border: 0;
   cursor: pointer;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   margin-top: auto;
   transition: transform 0.15s;
@@ -290,7 +292,7 @@ a {
 }
 
 .hint-copy {
-  font-size: 13px;
+  font-size: 14px;
   color: #7a8e9a;
   line-height: 1.4;
 }
@@ -375,14 +377,14 @@ a {
 
 .modal-name {
   font-family: var(--serif);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
   color: #fff;
   text-align: center;
 }
 
 .modal-role {
-  font-size: 14px;
+  font-size: 15px;
   color: rgba(255, 255, 255, 0.8);
   margin-top: 2px;
   text-align: center;
@@ -402,7 +404,7 @@ a {
 }
 
 .news-label {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -410,7 +412,7 @@ a {
 }
 
 .news-copy {
-  font-size: 14px;
+  font-size: 15px;
   color: #4a5568;
   line-height: 1.5;
 }
@@ -433,14 +435,14 @@ a {
 }
 
 .phone-label {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
 .phone-value {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--text);
   font-family: var(--serif);

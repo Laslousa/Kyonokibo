@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap");
 
 :root {
   --bg: #f5f0e8;
@@ -18,8 +18,8 @@
   --radius-lg: 24px;
   --radius-md: 18px;
   --radius-sm: 14px;
-  --sans: "DM Sans", "Segoe UI", sans-serif;
-  --serif: "Playfair Display", Georgia, serif;
+  --sans: "Roboto", "Segoe UI", sans-serif;
+  --serif: Baskerville, "Times New Roman", serif;
 }
 
 * {
@@ -105,9 +105,9 @@ a {
 
 .eyebrow {
   margin: 0 0 8px;
-  font-size: 12px;
+  font-size: 17px;
   font-weight: 700;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--green);
 }
@@ -115,8 +115,8 @@ a {
 .page-header h1 {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(2.1rem, 5vw, 3rem);
-  line-height: 1.05;
+  font-size: 64px;
+  line-height: 1.1;
 }
 
 .profile-card,
@@ -141,16 +141,18 @@ a {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
   flex-shrink: 0;
-  color: #fff;
-  font-family: var(--serif);
-  font-size: 1.9rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--blue), var(--blue-strong));
-  box-shadow: 0 10px 22px rgba(123, 167, 188, 0.35);
+  overflow: hidden;
+  background: transparent;
+  box-shadow: 0 10px 22px rgba(45, 55, 72, 0.12);
   border: 3px solid #fff;
+}
+
+.profile-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .profile-copy {
@@ -161,12 +163,12 @@ a {
 .profile-copy h2 {
   margin: 0;
   font-family: var(--serif);
-  font-size: 1.75rem;
+  font-size: 2.15rem;
 }
 
 .profile-copy p {
   margin: 4px 0 0;
-  font-size: 0.92rem;
+  font-size: 1.12rem;
   color: var(--muted);
 }
 
@@ -176,7 +178,7 @@ a {
   color: #6a96c8;
   border-radius: 12px;
   padding: 7px 14px;
-  font-size: 0.8rem;
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -200,11 +202,11 @@ a {
 }
 
 .section-icon {
-  font-size: 1rem;
+  font-size: 1.08rem;
 }
 
 .section-title {
-  font-size: 0.72rem;
+  font-size: 0.94rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -266,7 +268,7 @@ a {
   flex-shrink: 0;
   display: grid;
   place-items: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .tone-blue .setting-badge {
@@ -296,13 +298,13 @@ a {
 
 .setting-copy h3 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.24rem;
   font-weight: 600;
 }
 
 .setting-copy p {
   margin: 3px 0 0;
-  font-size: 0.8rem;
+  font-size: 1.02rem;
   color: var(--muted);
 }
 
@@ -364,7 +366,7 @@ a {
 }
 
 .volume-icon {
-  font-size: 0.95rem;
+  font-size: 1.16rem;
   color: var(--blue);
 }
 
@@ -394,7 +396,7 @@ a {
 }
 
 .size-3 {
-  font-size: 1.08rem;
+  font-size: 1.3rem;
 }
 
 .size-dots {
@@ -408,7 +410,7 @@ a {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-size: 0.62rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--green);
   background: #eef5ef;
@@ -426,7 +428,7 @@ a {
 
 .block-label {
   margin: 0 0 10px;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
@@ -442,7 +444,7 @@ a {
   padding: 8px 16px;
   background: #fbf7f0;
   color: var(--gold);
-  font-size: 0.82rem;
+  font-size: 1.02rem;
   font-weight: 600;
 }
 
@@ -459,19 +461,44 @@ a {
 }
 
 .danger-card {
-  border: 1.5px solid #fce8e4;
+  background: rgba(255, 239, 237, 0.96);
+  border: 1.5px solid #e07070;
   overflow: hidden;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.danger-card:hover,
+.danger-card:focus-within {
+  transform: translateY(-2px);
+  border-color: #d85c5c;
+  background: rgba(255, 233, 231, 0.98);
+  box-shadow: 0 16px 30px rgba(224, 112, 112, 0.22);
+}
+
+.danger-card .is-link:hover,
+.danger-card .is-link:focus-visible {
+  background: rgba(224, 112, 112, 0.1);
 }
 
 .danger-arrow {
   color: var(--danger);
+  transition: transform 180ms ease;
+}
+
+.danger-card:hover .danger-arrow,
+.danger-card:focus-within .danger-arrow {
+  transform: translateX(4px);
 }
 
 .version-note {
   margin: 4px 0 0;
   text-align: center;
   color: #c0cdd8;
-  font-size: 0.78rem;
+  font-size: 0.96rem;
 }
 
 @media (max-width: 760px) {
@@ -515,7 +542,7 @@ a {
   }
 
   .profile-copy h2 {
-    font-size: 1.5rem;
+    font-size: 1.86rem;
   }
   .chip {
     width: 100%;
