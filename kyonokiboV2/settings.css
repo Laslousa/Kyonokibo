@@ -35,9 +35,7 @@ body {
 body {
   font-family: var(--sans);
   color: var(--text);
-  background:
-    linear-gradient(rgba(245, 240, 232, 0.84), rgba(245, 240, 232, 0.9)),
-    url("background3.png") center center / cover fixed no-repeat;
+  background: url("background3.png") center center / cover fixed no-repeat;
 }
 
 button,
@@ -73,7 +71,11 @@ a {
   height: 520px;
   top: -180px;
   right: -90px;
-  background: radial-gradient(circle, rgba(157, 191, 163, 0.22), transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(157, 191, 163, 0.22),
+    transparent 70%
+  );
 }
 
 .blob-b {
@@ -81,7 +83,11 @@ a {
   height: 360px;
   bottom: 100px;
   left: -90px;
-  background: radial-gradient(circle, rgba(179, 155, 200, 0.17), transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(179, 155, 200, 0.17),
+    transparent 70%
+  );
 }
 
 .settings-page {

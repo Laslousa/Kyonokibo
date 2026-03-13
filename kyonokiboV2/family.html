@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kyono Kibo - Family</title>
+    <link rel="stylesheet" href="family.css" />
+    <link rel="stylesheet" href="nav.css" />
+  </head>
+  <body>
+    <div class="bg-deco" aria-hidden="true">
+      <div class="bc bc1"></div>
+      <div class="bc bc2"></div>
+    </div>
+
+    <main class="app-shell">
+      <section class="page">
+        <header class="header">
+          <div class="eyebrow">Vos proches</div>
+          <h1 class="title">Ta famille</h1>
+          <div class="subtitle">
+            Appuie sur un prenom pour appeler ou en savoir plus
+          </div>
+        </header>
+
+        <section class="grid" aria-label="Membres de la famille">
+          <article
+            class="member-card"
+            style="--member-border: #c8defa; --member-shadow: #7ba7bc33"
+          >
+            <div
+              class="card-band"
+              style="background: linear-gradient(90deg, #7ba7bc, #7ba7bc88)"
+            ></div>
+            <div class="card-body">
+              <button
+                class="member-hitbox"
+                type="button"
+                data-open-modal="sophie"
+                aria-label="Ouvrir la fiche de Sophie"
+              ></button>
+              <div class="avatar-wrap">
+                <img
+                  class="avatar-img"
+                  src="./image-fille2.png"
+                  alt="Sophie"
+                  data-fallback-container
+                />
+                <div
+                  class="avatar-fallback"
+                  style="
+                    background: linear-gradient(135deg, #7ba7bc, #7ba7bcbb);
+                    box-shadow: 0 6px 20px #7ba7bc44;
+                  "
+                >
+                  S
+                </div>
+                <div class="online-dot online-dot-active"></div>
+              </div>
+              <div>
+                <div class="card-name">Sophie</div>
+                <div
+                  class="role-pill"
+                  style="
+                    color: #7ba7bc;
+                    background: #eef5ff;
+                    border: 1.5px solid #c8defa;
+                  "
+                >
+                  Ta fille
+                </div>
+              </div>
+              <div class="card-note">T'accompagne chez le medecin demain</div>
+              <a
+                class="call-btn"
+                href="tel:0723456789"
+                style="
+                  background: linear-gradient(135deg, #7ba7bc, #7ba7bccc);
+                  box-shadow: 0 4px 14px #7ba7bc44;
+                "
+                >Tel Appeler</a
+              >
+            </div>
+          </article>
+
+          <article
+            class="member-card"
+            style="--member-border: #b8d9bf; --member-shadow: #9dbfa333"
+          >
+            <div
+              class="card-band"
+              style="background: linear-gradient(90deg, #9dbfa3, #9dbfa388)"
+            ></div>
+            <div class="card-body">
+              <button
+                class="member-hitbox"
+                type="button"
+                data-open-modal="marc"
+                aria-label="Ouvrir la fiche de Marc"
+              ></button>
+              <div class="avatar-wrap">
+                <img
+                  class="avatar-img"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
+                  alt="Marc"
+                  data-fallback-container
+                />
+                <div
+                  class="avatar-fallback"
+                  style="
+                    background: linear-gradient(135deg, #9dbfa3, #9dbfa3bb);
+                    box-shadow: 0 6px 20px #9dbfa344;
+                  "
+                >
+                  M
+                </div>
+                <div class="online-dot"></div>
+              </div>
+              <div>
+                <div class="card-name">Marc</div>
+                <div
+                  class="role-pill"
+                  style="
+                    color: #9dbfa3;
+                    background: #f0f7f3;
+                    border: 1.5px solid #b8d9bf;
+                  "
+                >
+                  Ton fils
+                </div>
+              </div>
+              <div class="card-note">Appelle tous les dimanches</div>
+              <a
+                class="call-btn"
+                href="tel:0611223344"
+                style="
+                  background: linear-gradient(135deg, #9dbfa3, #9dbfa3cc);
+                  box-shadow: 0 4px 14px #9dbfa344;
+                "
+                >Tel Appeler</a
+              >
+            </div>
+          </article>
+
+          <article
+            class="member-card"
+            style="--member-border: #ddd0b8; --member-shadow: #c4a88233"
+          >
+            <div
+              class="card-band"
+              style="background: linear-gradient(90deg, #c4a882, #c4a88288)"
+            ></div>
+            <div class="card-body">
+              <button
+                class="member-hitbox"
+                type="button"
+                data-open-modal="claire"
+                aria-label="Ouvrir la fiche de Claire"
+              ></button>
+              <div class="avatar-wrap">
+                <img
+                  class="avatar-img"
+                  src="./image-epouse.png"
+                  alt="Claire"
+                  data-fallback-container
+                />
+                <div
+                  class="avatar-fallback"
+                  style="
+                    background: linear-gradient(135deg, #c4a882, #c4a882bb);
+                    box-shadow: 0 6px 20px #c4a88244;
+                  "
+                >
+                  C
+                </div>
+                <div class="online-dot online-dot-active"></div>
+              </div>
+              <div>
+                <div class="card-name">Claire</div>
+                <div
+                  class="role-pill"
+                  style="
+                    color: #c4a882;
+                    background: #fbf7f0;
+                    border: 1.5px solid #ddd0b8;
+                  "
+                >
+                  Ton epouse
+                </div>
+              </div>
+              <div class="card-note">Dans la piece d'a cote</div>
+              <a
+                class="call-btn"
+                href="tel:0655443322"
+                style="
+                  background: linear-gradient(135deg, #c4a882, #c4a882cc);
+                  box-shadow: 0 4px 14px #c4a88244;
+                "
+                >Tel Appeler</a
+              >
+            </div>
+          </article>
+
+          <article
+            class="member-card"
+            style="--member-border: #d5c8ea; --member-shadow: #b39bc833"
+          >
+            <div
+              class="card-band"
+              style="background: linear-gradient(90deg, #b39bc8, #b39bc888)"
+            ></div>
+            <div class="card-body">
+              <button
+                class="member-hitbox"
+                type="button"
+                data-open-modal="lucas"
+                aria-label="Ouvrir la fiche de Lucas"
+              ></button>
+              <div class="avatar-wrap">
+                <img
+                  class="avatar-img"
+                  src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=300&h=300&fit=crop&crop=face"
+                  alt="Lucas"
+                  data-fallback-container
+                />
+                <div
+                  class="avatar-fallback"
+                  style="
+                    background: linear-gradient(135deg, #b39bc8, #b39bc8bb);
+                    box-shadow: 0 6px 20px #b39bc844;
+                  "
+                >
+                  L
+                </div>
+                <div class="online-dot"></div>
+              </div>
+              <div>
+                <div class="card-name">Lucas</div>
+                <div
+                  class="role-pill"
+                  style="
+                    color: #b39bc8;
+                    background: #f5f0fb;
+                    border: 1.5px solid #d5c8ea;
+                  "
+                >
+                  Ton petit-fils
+                </div>
+              </div>
+              <div class="card-note">Vient te rendre visite ce week-end</div>
+              <a
+                class="call-btn"
+                href="tel:0788990011"
+                style="
+                  background: linear-gradient(135deg, #b39bc8, #b39bc8cc);
+                  box-shadow: 0 4px 14px #b39bc844;
+                "
+                >Tel Appeler</a
+              >
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <section
+      class="modal-backdrop is-hidden"
+      data-modal="sophie"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="member-sophie"
+      >
+        <div
+          class="modal-header"
+          style="background: linear-gradient(135deg, #7ba7bc, #7ba7bc99)"
+        >
+          <button
+            class="close-btn"
+            type="button"
+            data-close-modal
+            aria-label="Fermer"
+          >
+            X
+          </button>
+          <div class="modal-media-wrap">
+            <img
+              class="modal-avatar"
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop&crop=face"
+              alt="Sophie"
+              data-fallback-container
+            />
+            <div class="modal-fallback">S</div>
+          </div>
+          <div>
+            <div class="modal-name" id="member-sophie">Sophie</div>
+            <div class="modal-role">Ta fille</div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div
+            class="news-card"
+            style="background: #eef5ff; border-color: #c8defa"
+          >
+            <div class="news-label" style="color: #7ba7bc">
+              Derniere nouvelle
+            </div>
+            <div class="news-copy">T'accompagne chez le medecin demain</div>
+          </div>
+          <div class="phone-row">
+            <div class="phone-icon" style="background: #eef5ff">Tel</div>
+            <div>
+              <div class="phone-label">NUMERO</div>
+              <div class="phone-value">07 23 45 67 89</div>
+            </div>
+          </div>
+          <a
+            class="modal-call-btn"
+            href="tel:0723456789"
+            style="
+              background: linear-gradient(135deg, #7ba7bc, #7ba7bccc);
+              box-shadow: 0 6px 20px #7ba7bc44;
+            "
+            >Tel Appeler Sophie</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="modal-backdrop is-hidden"
+      data-modal="marc"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="member-marc"
+      >
+        <div
+          class="modal-header"
+          style="background: linear-gradient(135deg, #9dbfa3, #9dbfa399)"
+        >
+          <button
+            class="close-btn"
+            type="button"
+            data-close-modal
+            aria-label="Fermer"
+          >
+            X
+          </button>
+          <div class="modal-media-wrap">
+            <img
+              class="modal-avatar"
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
+              alt="Marc"
+              data-fallback-container
+            />
+            <div class="modal-fallback">M</div>
+          </div>
+          <div>
+            <div class="modal-name" id="member-marc">Marc</div>
+            <div class="modal-role">Ton fils</div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div
+            class="news-card"
+            style="background: #f0f7f3; border-color: #b8d9bf"
+          >
+            <div class="news-label" style="color: #9dbfa3">
+              Derniere nouvelle
+            </div>
+            <div class="news-copy">Appelle tous les dimanches</div>
+          </div>
+          <div class="phone-row">
+            <div class="phone-icon" style="background: #f0f7f3">Tel</div>
+            <div>
+              <div class="phone-label">NUMERO</div>
+              <div class="phone-value">06 11 22 33 44</div>
+            </div>
+          </div>
+          <a
+            class="modal-call-btn"
+            href="tel:0611223344"
+            style="
+              background: linear-gradient(135deg, #9dbfa3, #9dbfa3cc);
+              box-shadow: 0 6px 20px #9dbfa344;
+            "
+            >Tel Appeler Marc</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="modal-backdrop is-hidden"
+      data-modal="claire"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="member-claire"
+      >
+        <div
+          class="modal-header"
+          style="background: linear-gradient(135deg, #c4a882, #c4a88299)"
+        >
+          <button
+            class="close-btn"
+            type="button"
+            data-close-modal
+            aria-label="Fermer"
+          >
+            X
+          </button>
+          <div class="modal-media-wrap">
+            <img
+              class="modal-avatar"
+              src="https://images.unsplash.com/photo-1552058544-f2b08422138a?w=300&h=300&fit=crop&crop=face"
+              alt="Claire"
+              data-fallback-container
+            />
+            <div class="modal-fallback">C</div>
+          </div>
+          <div>
+            <div class="modal-name" id="member-claire">Claire</div>
+            <div class="modal-role">Ton epouse</div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div
+            class="news-card"
+            style="background: #fbf7f0; border-color: #ddd0b8"
+          >
+            <div class="news-label" style="color: #c4a882">
+              Derniere nouvelle
+            </div>
+            <div class="news-copy">Dans la piece d'a cote</div>
+          </div>
+          <div class="phone-row">
+            <div class="phone-icon" style="background: #fbf7f0">Tel</div>
+            <div>
+              <div class="phone-label">NUMERO</div>
+              <div class="phone-value">06 55 44 33 22</div>
+            </div>
+          </div>
+          <a
+            class="modal-call-btn"
+            href="tel:0655443322"
+            style="
+              background: linear-gradient(135deg, #c4a882, #c4a882cc);
+              box-shadow: 0 6px 20px #c4a88244;
+            "
+            >Tel Appeler Claire</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="modal-backdrop is-hidden"
+      data-modal="lucas"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="member-lucas"
+      >
+        <div
+          class="modal-header"
+          style="background: linear-gradient(135deg, #b39bc8, #b39bc899)"
+        >
+          <button
+            class="close-btn"
+            type="button"
+            data-close-modal
+            aria-label="Fermer"
+          >
+            X
+          </button>
+          <div class="modal-media-wrap">
+            <img
+              class="modal-avatar"
+              src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=300&h=300&fit=crop&crop=face"
+              alt="Lucas"
+              data-fallback-container
+            />
+            <div class="modal-fallback">L</div>
+          </div>
+          <div>
+            <div class="modal-name" id="member-lucas">Lucas</div>
+            <div class="modal-role">Ton petit-fils</div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div
+            class="news-card"
+            style="background: #f5f0fb; border-color: #d5c8ea"
+          >
+            <div class="news-label" style="color: #b39bc8">
+              Derniere nouvelle
+            </div>
+            <div class="news-copy">Vient te rendre visite ce week-end</div>
+          </div>
+          <div class="phone-row">
+            <div class="phone-icon" style="background: #f5f0fb">Tel</div>
+            <div>
+              <div class="phone-label">NUMERO</div>
+              <div class="phone-value">07 88 99 00 11</div>
+            </div>
+          </div>
+          <a
+            class="modal-call-btn"
+            href="tel:0788990011"
+            style="
+              background: linear-gradient(135deg, #b39bc8, #b39bc8cc);
+              box-shadow: 0 6px 20px #b39bc844;
+            "
+            >Tel Appeler Lucas</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <nav class="bottom-nav" aria-label="Navigation principale">
+      <a class="nav-item" href="home.html">
+        <span class="nav-icon">&#8962;</span>
+        <span class="nav-label">Accueil</span>
+      </a>
+      <a class="nav-item" href="calendar.html">
+        <span class="nav-icon">&#128197;</span>
+        <span class="nav-label">Calendrier</span>
+      </a>
+      <a class="nav-item" href="quiz.html">
+        <span class="nav-icon">&#129504;</span>
+        <span class="nav-label">Quiz</span>
+      </a>
+      <a class="nav-item active" href="family.html" aria-current="page">
+        <span class="nav-icon">&#128106;</span>
+        <span class="nav-label">Famille</span>
+      </a>
+      <a class="nav-item" href="settings.html">
+        <span class="nav-icon">&#9881;</span>
+        <span class="nav-label">Parametres</span>
+      </a>
+    </nav>
+
+    <script src="nav.js"></script>
+    <script src="family.js"></script>
+  </body>
+</html>
