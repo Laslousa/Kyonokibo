@@ -1,4 +1,4 @@
-*,
+﻿*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -8,7 +8,7 @@
 
 body {
   font-family: "DM Sans", sans-serif;
-  background: url("background3.png") center center / cover fixed no-repeat;
+  background: url("../public/images/background3.png") center center / cover fixed no-repeat;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -374,3 +374,4 @@ body::after {
   color: #5d8fae;
   font-weight: 700;
 }
+

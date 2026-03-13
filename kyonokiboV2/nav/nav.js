@@ -11,7 +11,8 @@
 
   navItems.forEach((item) => {
     const target = item.getAttribute("href").toLowerCase();
-    const isActive = target === currentPage;
+    const targetPage = target.split("/").pop().split("?")[0].split("#")[0];
+    const isActive = targetPage === currentPage;
     item.classList.toggle("active", isActive);
     if (isActive) {
       item.setAttribute("aria-current", "page");

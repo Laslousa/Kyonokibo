@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap");
 :root {
   --bg: #f5f0e8;
   --panel: #ffffff;
@@ -33,7 +33,7 @@ body {
 body {
   font-family: var(--sans);
   color: var(--text);
-  background: url("background3.png") center center / cover fixed no-repeat;
+  background: url("../public/images/background3.png") center center / cover fixed no-repeat;
 }
 
 button,
@@ -348,3 +348,4 @@ a {
     justify-self: start;
   }
 }
+
