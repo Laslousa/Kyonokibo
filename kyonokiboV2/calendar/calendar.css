@@ -316,6 +316,49 @@ a {
   cursor: pointer;
 }
 
+.events-nav {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.events-nav-btn {
+  border: 1px solid #3f8f45;
+  background: #4caf50;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(63, 143, 69, 0.28);
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.events-nav-btn:hover {
+  transform: translateY(-1px);
+  background: #459a49;
+}
+
+.events-nav-btn:disabled {
+  border: 1px solid #3f8f45;
+  background: #4caf50;
+  color: #fff;
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(63, 143, 69, 0.28);
+}
+
+.events-counter {
+  min-width: 64px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -642,6 +685,15 @@ a {
 
   .event-modal-head h2 {
     font-size: 28px;
+  }
+
+  .events-nav {
+    gap: 8px;
+  }
+
+  .events-nav-btn {
+    font-size: 15px;
+    padding: 9px 14px;
   }
 }
 
