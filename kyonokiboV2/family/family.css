@@ -13,6 +13,7 @@
   --radius-md: 18px;
   --serif: Baskerville, "Times New Roman", serif;
   --sans: "Roboto", "Segoe UI", sans-serif;
+  --family-type-scale: 1.2;
 }
 
 * {
@@ -59,7 +60,7 @@ a {
 
 .app-shell {
   min-height: 100vh;
-  max-width: 760px;
+  max-width: 86%;
   margin: 0 auto;
   padding: 0 20px 96px;
   position: relative;
@@ -110,11 +111,11 @@ a {
 
 .header {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .eyebrow {
-  font-size: 15px;
+  font-size: calc(15px * var(--family-type-scale));
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -123,25 +124,28 @@ a {
 }
 
 .title {
-  margin: 0 0 6px;
+  margin: 6px 0 0;
   font-family: var(--serif);
-  font-size: 40px;
+  font-size: calc(40px * var(--family-type-scale));
   font-weight: 700;
+  line-height: 1.1;
 }
 
 .subtitle {
-  font-size: 16px;
+  font-size: calc(15px * var(--family-type-scale));
   color: var(--muted);
+  line-height: 1.5;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
   animation: slide-up 0.4s ease;
 }
 
 .member-card {
+  width: 300px;
   background: #fff;
   border-radius: 24px;
   overflow: hidden;
@@ -220,7 +224,7 @@ a {
   align-items: center;
   justify-content: center;
   font-family: var(--serif);
-  font-size: 36px;
+  font-size: calc(36px * var(--family-type-scale));
   color: #fff;
 }
 
@@ -241,28 +245,29 @@ a {
 
 .card-name {
   font-family: var(--serif);
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 3px;
+  font-size: calc(24px * var(--family-type-scale));
+  margin-bottom: 4px;
+  line-height: 1.2;
   text-align: center;
 }
 
 .role-pill {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: calc(14px * var(--family-type-scale));
+  font-weight: 700;
   border-radius: 100px;
-  padding: 3px 12px;
+  padding: 5px 14px;
   display: inline-block;
+  letter-spacing: 0.01em;
 }
 
 .card-note {
-  font-size: 13px;
+  font-size: calc(14px * var(--family-type-scale));
   color: var(--muted);
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.55;
   font-style: italic;
   padding: 0 4px;
-  min-height: 32px;
+  min-height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -275,7 +280,7 @@ a {
   border: 0;
   cursor: pointer;
   color: #fff;
-  font-size: 16px;
+  font-size: calc(16px * var(--family-type-scale));
   font-weight: 700;
   margin-top: auto;
   transition: transform 0.15s;
@@ -304,14 +309,14 @@ a {
 }
 
 .hint-dot {
-  font-size: 22px;
+  font-size: calc(22px * var(--family-type-scale));
   flex-shrink: 0;
 }
 
 .hint-copy {
-  font-size: 14px;
+  font-size: calc(15px * var(--family-type-scale));
   color: #7a8e9a;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .hint-copy strong {
@@ -360,7 +365,7 @@ a {
   background: rgba(255, 255, 255, 0.25);
   border: 0;
   color: #fff;
-  font-size: 16px;
+  font-size: calc(16px * var(--family-type-scale));
   cursor: pointer;
 }
 
@@ -387,24 +392,26 @@ a {
   align-items: center;
   justify-content: center;
   font-family: var(--serif);
-  font-size: 40px;
+  font-size: calc(40px * var(--family-type-scale));
   color: #fff;
   background: rgba(255, 255, 255, 0.3);
 }
 
 .modal-name {
   font-family: var(--serif);
-  font-size: 26px;
+  font-size: calc(28px * var(--family-type-scale));
   font-weight: 700;
   color: #fff;
   text-align: center;
+  line-height: 1.1;
 }
 
 .modal-role {
-  font-size: 15px;
+  font-size: calc(15px * var(--family-type-scale));
   color: rgba(255, 255, 255, 0.8);
   margin-top: 2px;
   text-align: center;
+  line-height: 1.4;
 }
 
 .modal-body {
@@ -421,17 +428,17 @@ a {
 }
 
 .news-label {
-  font-size: 11px;
+  font-size: calc(12px * var(--family-type-scale));
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 4px;
 }
 
 .news-copy {
-  font-size: 15px;
+  font-size: calc(15px * var(--family-type-scale));
   color: #4a5568;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .phone-row {
@@ -447,19 +454,19 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: calc(18px * var(--family-type-scale));
   flex-shrink: 0;
 }
 
 .phone-label {
-  font-size: 12px;
+  font-size: calc(12px * var(--family-type-scale));
   color: var(--muted);
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
 .phone-value {
-  font-size: 22px;
+  font-size: calc(20px * var(--family-type-scale));
   font-weight: 700;
   color: var(--text);
   font-family: var(--serif);
@@ -473,7 +480,7 @@ a {
   border: 0;
   cursor: pointer;
   color: #fff;
-  font-size: 18px;
+  font-size: calc(16px * var(--family-type-scale));
   font-weight: 700;
   text-decoration: none;
   display: flex;
@@ -524,3 +531,4 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
