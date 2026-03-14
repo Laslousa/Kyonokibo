@@ -418,6 +418,111 @@ a {
   box-shadow: 0 0 0 4px rgba(123, 167, 188, 0.12);
 }
 
+.form-file-wrap {
+  position: relative;
+}
+
+.form-file-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.form-file-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.form-file-ui {
+  width: 100%;
+  border: 1px solid #d9e5ec;
+  border-radius: 14px;
+  background: #fbfdff;
+  color: var(--text);
+  padding: 12px 44px 12px 38px;
+  min-height: 49px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-file-wrap:hover .form-file-trigger {
+  background: #e6eef5;
+}
+
+.form-file-wrap:focus-within .form-file-ui {
+  border-color: rgba(123, 167, 188, 0.7);
+  box-shadow: 0 0 0 4px rgba(123, 167, 188, 0.12);
+}
+
+.form-file-trigger {
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue-strong);
+  background: #eef3f7;
+}
+
+.form-file-name {
+  color: var(--muted);
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form-file-wrap.has-file .form-file-name {
+  color: var(--text);
+}
+
+.form-file-clear {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: 1px solid #f2bcbc;
+  border-radius: 999px;
+  background: #ffeaea;
+  color: #cf2c2c;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease, background 0.18s ease;
+  z-index: 4;
+}
+
+.form-file-clear:hover {
+  background: #ffdede;
+}
+
+.form-file-wrap.has-file .form-file-clear {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .form-textarea {
   resize: vertical;
   min-height: 104px;

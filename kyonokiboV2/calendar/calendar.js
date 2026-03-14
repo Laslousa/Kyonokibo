@@ -4,6 +4,10 @@
   const closeButtons = document.querySelectorAll("[data-close-event-modal]");
   const form = document.querySelector("[data-event-form]");
   const eventsList = document.querySelector("[data-events-list]");
+  const imageInput = form?.querySelector('input[name="image"]');
+  const clearFileButton = form?.querySelector("[data-clear-file]");
+  const fileNameDisplay = form?.querySelector("[data-file-name]");
+  const defaultFileText = "Aucun fichier choisi";
 
   if (!modal || !openButton || !form || !eventsList) {
     return;
@@ -43,6 +47,28 @@
     return `${hours}:${minutes}`;
   };
 
+  const syncFileInputState = () => {
+    if (!imageInput) {
+      return;
+    }
+
+    const hasFile = Boolean(imageInput.files && imageInput.files.length > 0);
+    const selectedFileName = hasFile ? imageInput.files[0].name : defaultFileText;
+    const fileWrap = imageInput.closest(".form-file-wrap");
+
+    if (fileWrap) {
+      fileWrap.classList.toggle("has-file", hasFile);
+    }
+
+    if (clearFileButton) {
+      clearFileButton.disabled = !hasFile;
+    }
+
+    if (fileNameDisplay) {
+      fileNameDisplay.textContent = selectedFileName;
+    }
+  };
+
   openButton.addEventListener("click", openModal);
 
   closeButtons.forEach((button) => {
@@ -60,6 +86,18 @@
       closeModal();
     }
   });
+
+  if (imageInput) {
+    imageInput.addEventListener("change", syncFileInputState);
+  }
+
+  if (imageInput && clearFileButton) {
+    clearFileButton.addEventListener("click", () => {
+      imageInput.value = "";
+      syncFileInputState();
+      imageInput.focus();
+    });
+  }
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -99,6 +137,9 @@
 
     eventsList.appendChild(card);
     form.reset();
+    syncFileInputState();
     closeModal();
   });
+
+  syncFileInputState();
 })();

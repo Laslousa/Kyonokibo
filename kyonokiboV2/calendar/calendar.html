@@ -135,6 +135,33 @@
         </label>
 
         <label class="form-field">
+          <span class="form-label">Image</span>
+          <div class="form-file-wrap">
+            <span class="form-file-icon" aria-hidden="true">📎</span>
+            <div class="form-file-ui" aria-hidden="true">
+              <span class="form-file-trigger">Choisir un fichier</span>
+              <span class="form-file-name" data-file-name>Aucun fichier choisi</span>
+            </div>
+            <input
+              class="form-file-input"
+              type="file"
+              name="image"
+              accept=".jpg,.jpeg,.png,image/jpeg,image/png"
+              aria-label="Ajouter une image"
+            />
+            <button
+              class="form-file-clear"
+              type="button"
+              data-clear-file
+              aria-label="Supprimer le fichier selectionne"
+              disabled
+            >
+              &times;
+            </button>
+          </div>
+        </label>
+
+        <label class="form-field">
           <span class="form-label">Note</span>
           <textarea class="form-textarea" name="note" rows="4" placeholder="Ajouter un detail utile..."></textarea>
         </label>
