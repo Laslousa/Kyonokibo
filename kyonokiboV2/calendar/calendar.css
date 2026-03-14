@@ -1,4 +1,6 @@
-﻿:root {
+﻿@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap");
+
+:root {
   --text: #2d3748;
   --muted: #8ea0ae;
   --line: #e6edf2;
@@ -9,7 +11,10 @@
   --shadow: 0 10px 30px rgba(80, 80, 100, 0.08);
   --radius-md: 18px;
   --serif: Baskerville, "Times New Roman", serif;
-  --sans: "Trebuchet MS", "Segoe UI", sans-serif;
+  --sans: "Roboto", "Segoe UI", sans-serif;
+  --fs-base: 16px;
+  --fs-eyebrow: 15px;
+  --fs-title: 40px;
 }
 
 * {
@@ -25,6 +30,7 @@ body {
 body {
   position: relative;
   font-family: var(--sans);
+  font-size: var(--fs-base);
   color: var(--text);
   background: url("../public/images/background3.png") center center / cover
     fixed no-repeat;
@@ -64,7 +70,7 @@ a {
 }
 
 .eyebrow {
-  font-size: 15px;
+  font-size: var(--fs-eyebrow);
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -74,7 +80,7 @@ a {
 .title {
   margin: 6px 0 0;
   font-family: var(--serif);
-  font-size: 60px;
+  font-size: var(--fs-title);
   line-height: 1.1;
 }
 
@@ -531,3 +537,5 @@ a {
     font-size: 28px;
   }
 }
+
+

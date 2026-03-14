@@ -20,6 +20,10 @@
   --radius-sm: 14px;
   --sans: "Roboto", "Segoe UI", sans-serif;
   --serif: Baskerville, "Times New Roman", serif;
+  --fs-base: 16px;
+  --fs-eyebrow: 15px;
+  --fs-page-title: 40px;
+  --fs-section-title: 28px;
 }
 
 * {
@@ -35,6 +39,7 @@ body {
 body {
   position: relative;
   font-family: var(--sans);
+  font-size: var(--fs-base);
   color: var(--text);
   background: url("../public/images/background3.png") center center / cover
     fixed no-repeat;
@@ -122,7 +127,7 @@ a {
 
 .eyebrow {
   margin: 0 0 8px;
-  font-size: 17px;
+  font-size: var(--fs-eyebrow);
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -132,7 +137,7 @@ a {
 .page-header h1 {
   margin: 0;
   font-family: var(--serif);
-  font-size: 48px;
+  font-size: var(--fs-page-title);
   line-height: 1.1;
 }
 

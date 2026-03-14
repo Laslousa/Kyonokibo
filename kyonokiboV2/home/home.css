@@ -18,6 +18,7 @@
   --serif: Baskerville, "Times New Roman", serif;
   /* --sans: "Trebuchet MS", "Segoe UI", sans-serif; */
   --sans: "Roboto", "Segoe UI", sans-serif;
+  --fs-base: 16px;
 }
 
 * {
@@ -33,6 +34,7 @@ body {
 body {
   position: relative;
   font-family: var(--sans);
+  font-size: var(--fs-base);
   color: var(--text);
   background: url("../public/images/background3.png") center center / cover
     fixed no-repeat;

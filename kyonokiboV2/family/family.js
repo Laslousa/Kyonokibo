@@ -23,10 +23,11 @@ function closeModal(modal) {
   document.body.classList.toggle("has-modal", hasOpenModal);
 }
 
+// Cards are read-only on this page: disable modal opening from card clicks.
 modalTriggers.forEach((trigger) => {
-  trigger.addEventListener("click", () => {
-    openModal(trigger.dataset.openModal);
-  });
+  trigger.setAttribute("aria-hidden", "true");
+  trigger.setAttribute("tabindex", "-1");
+  trigger.disabled = true;
 });
 
 modalClosers.forEach((button) => {
