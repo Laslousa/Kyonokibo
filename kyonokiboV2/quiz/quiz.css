@@ -83,7 +83,7 @@ body::after {
   position: fixed;
   top: 16px;
   right: 16px;
-  width: 320px;
+  width: 386px;
   padding: 14px;
   border-radius: 16px;
   border: 1.5px solid #f3d59e;
@@ -118,7 +118,7 @@ body::after {
 
 .hint-text {
   margin-top: 7px;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1.35;
   color: #5a4a33;
 }
@@ -368,7 +368,10 @@ body::after {
   background: rgba(255, 255, 255, 0.25);
   color: #fff;
 }
-
+.ans-text {
+  flex: 1;
+  font-size: 20px;
+}
 .feedback {
   margin: 0 16px 16px;
   border-radius: 18px;

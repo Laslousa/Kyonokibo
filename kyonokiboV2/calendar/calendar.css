@@ -325,8 +325,8 @@ a {
 }
 
 .events-nav-btn {
-  border: 1px solid #3f8f45;
-  background: #4caf50;
+  border: 1px solid #36498c4c;
+  background: linear-gradient(160deg, var(--blue), var(--blue-strong));
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -338,7 +338,7 @@ a {
 }
 
 .events-nav-btn:hover {
-  background: #459a49;
+  background: #36498cd8;
 }
 
 .events-nav-btn.previous {
@@ -354,7 +354,7 @@ a {
   text-align: center;
   font-size: 18px;
   font-weight: 700;
-  color: var(--muted);
+  color: rgba(0, 0, 0, 0.676);
   margin-top: 10px;
 }
 
@@ -390,7 +390,11 @@ a {
   justify-content: space-between;
   gap: 16px;
   padding: 20px 22px 14px;
-  background: linear-gradient(135deg, rgba(123, 167, 188, 0.12), rgba(224, 120, 64, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(123, 167, 188, 0.12),
+    rgba(224, 120, 64, 0.1)
+  );
   border-bottom: 1px solid rgba(230, 237, 242, 0.9);
 }
 
@@ -554,7 +558,9 @@ a {
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.18s ease, background 0.18s ease;
+  transition:
+    opacity 0.18s ease,
+    background 0.18s ease;
   z-index: 4;
 }
 
@@ -695,5 +701,3 @@ a {
     padding: 9px 14px;
   }
 }
-
-
