@@ -110,13 +110,13 @@ a {
 .settings-page {
   position: relative;
   z-index: 1;
-  max-width: 760px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 28px 20px 120px;
+  padding: 16px 20px 112px;
 }
 
 .page-header {
-  padding: 6px 0 18px;
+  padding: 2px 0 10px;
   text-align: center;
 }
 
@@ -132,8 +132,19 @@ a {
 .page-header h1 {
   margin: 0;
   font-family: var(--serif);
-  font-size: 64px;
+  font-size: 48px;
   line-height: 1.1;
+}
+
+.settings-layout {
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.settings-sidebar {
+  display: flex;
 }
 
 .profile-card,
@@ -147,17 +158,19 @@ a {
 
 .profile-card {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 24px 20px;
-  margin-bottom: 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px 20px;
   border: 1px solid rgba(255, 255, 255, 0.65);
 }
 
 .profile-avatar {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
+  width: 106px;
+  height: 106px;
+  border-radius: 24px;
   flex-shrink: 0;
   overflow: hidden;
   background: transparent;
@@ -180,29 +193,44 @@ a {
 .profile-copy h2 {
   margin: 0;
   font-family: var(--serif);
-  font-size: 2.15rem;
+  font-size: 2rem;
 }
 
 .profile-copy p {
-  margin: 4px 0 0;
-  font-size: 1.12rem;
+  margin: 6px 0 0;
+  font-size: 0.94rem;
+  line-height: 1.4;
   color: var(--muted);
 }
 
 .ghost-pill {
+  margin-top: auto;
   border: 1.5px solid #c8defa;
   background: #eef5ff;
   color: #6a96c8;
   border-radius: 12px;
-  padding: 7px 14px;
-  font-size: 18px;
+  padding: 7px 12px;
+  font-size: 15px;
   font-weight: 700;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+.ghost-pill-danger {
+  border-color: rgba(224, 112, 112, 0.24);
+  background: rgba(255, 239, 237, 0.96);
+  color: var(--danger);
 }
 
 .settings-stack {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
 }
 
 .section-card {
@@ -214,7 +242,7 @@ a {
   display: flex;
   align-items: center;
   gap: 9px;
-  padding: 14px 20px 12px;
+  padding: 11px 18px 10px;
   border-bottom: 1.5px solid #f5f5f5;
 }
 
@@ -227,6 +255,34 @@ a {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+.merged-settings .section-head {
+  background: linear-gradient(
+    90deg,
+    rgba(123, 167, 188, 0.12),
+    rgba(157, 191, 163, 0.12)
+  );
+}
+
+.merged-settings .section-title {
+  color: var(--text);
+}
+
+.section-subhead {
+  padding: 12px 18px 4px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.section-subhead-blue {
+  color: var(--blue);
+}
+
+.section-subhead-green {
+  color: var(--green);
 }
 
 .tone-blue .section-head {
@@ -265,7 +321,7 @@ a {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 16px 20px;
+  padding: 12px 18px;
 }
 
 .is-link {
@@ -279,13 +335,21 @@ a {
 }
 
 .setting-badge {
-  width: 42px;
-  height: 42px;
-  border-radius: 13px;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
   flex-shrink: 0;
   display: grid;
   place-items: center;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
+}
+
+.badge-blue {
+  background: rgba(123, 167, 188, 0.14);
+}
+
+.badge-green {
+  background: rgba(157, 191, 163, 0.16);
 }
 
 .tone-blue .setting-badge {
@@ -315,30 +379,44 @@ a {
 
 .setting-copy h3 {
   margin: 0;
-  font-size: 1.24rem;
+  font-size: 1.02rem;
   font-weight: 100;
 }
 
 .setting-copy p {
   margin: 3px 0 0;
-  font-size: 1.02rem;
+  font-size: 0.88rem;
   color: var(--muted);
 }
 
 .divider {
   height: 1px;
-  margin: 0 20px;
+  margin: 0 18px;
   background: var(--line);
 }
 
+.divider-strong {
+  margin-top: 4px;
+  background: linear-gradient(
+    90deg,
+    rgba(123, 167, 188, 0.3),
+    rgba(157, 191, 163, 0.3)
+  );
+}
+
 .toggle {
-  width: 52px;
-  height: 30px;
+  width: 48px;
+  height: 28px;
   position: relative;
   flex-shrink: 0;
   border-radius: 999px;
   background: #e2eaf0;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-blue.is-on {
+  background: linear-gradient(135deg, var(--blue), rgba(123, 167, 188, 0.82));
+  box-shadow: 0 3px 12px rgba(123, 167, 188, 0.35);
 }
 
 .toggle.is-on {
@@ -360,15 +438,15 @@ a {
   position: absolute;
   top: 3px;
   left: 3px;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
 }
 
 .toggle.is-on .toggle-knob {
-  left: 25px;
+  left: 23px;
 }
 
 .volume-control,
@@ -379,7 +457,7 @@ a {
 }
 
 .volume-control {
-  width: min(180px, 38vw);
+  width: min(150px, 22vw);
 }
 
 .volume-icon {
@@ -413,7 +491,7 @@ a {
 }
 
 .size-3 {
-  font-size: 1.3rem;
+  font-size: 1.18rem;
 }
 
 .size-dots {
@@ -422,12 +500,12 @@ a {
 }
 
 .size-dot {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-weight: 700;
   color: var(--green);
   background: #eef5ef;
@@ -512,24 +590,57 @@ a {
 }
 
 .version-note {
-  margin: 4px 0 0;
-  text-align: center;
+  margin: 2px 0 0;
+  text-align: right;
   color: #c0cdd8;
-  font-size: 0.96rem;
+  font-size: 0.82rem;
+}
+
+@media (min-width: 761px) {
+  .page-shell {
+    height: 100vh;
+  }
+
+  body {
+    overflow: hidden;
+  }
+
+  .settings-page {
+    min-height: calc(100vh - 108px);
+  }
 }
 
 @media (max-width: 760px) {
+  body {
+    overflow: auto;
+  }
+
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-sidebar {
+    display: block;
+  }
+
   .profile-card,
   .setting-row {
     align-items: flex-start;
   }
 
   .profile-card {
+    flex-direction: row;
     flex-wrap: wrap;
   }
 
   .ghost-pill {
+    margin-top: 0;
+  }
+
+  .profile-actions {
     margin-left: 86px;
+    margin-top: 0;
+    flex-wrap: wrap;
   }
 
   .setting-row {
@@ -561,6 +672,13 @@ a {
   .profile-copy h2 {
     font-size: 1.86rem;
   }
+
+  .profile-avatar {
+    width: 76px;
+    height: 76px;
+    border-radius: 22px;
+  }
+
   .chip {
     width: 100%;
     text-align: center;
