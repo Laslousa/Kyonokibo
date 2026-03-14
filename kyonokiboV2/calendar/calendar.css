@@ -550,7 +550,7 @@ a {
 }
 
 .form-btn-primary {
-  background: linear-gradient(135deg, var(--green), #82b98f);
+  background: #4caf50;
   color: #fff;
   box-shadow: 0 8px 20px rgba(157, 191, 163, 0.28);
 }
