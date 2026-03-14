@@ -68,9 +68,12 @@
             </div>
             <div class="detail-date">12 mars 2026</div>
           </div>
-          <button class="add-event-btn" type="button">Ajouter un &eacute;v&eacute;nement</button>
+          <button class="add-event-btn" type="button" data-open-event-modal>
+            Ajouter un &eacute;v&eacute;nement
+          </button>
         </div>
-        <div class="appointment-card">
+        <div class="events-list" data-events-list>
+          <div class="appointment-card">
           <div class="appointment-stripe" style="background:#E07840"></div>
           <div class="appointment-time" style="color:#E07840">12:00</div>
           <div class="appointment-divider"></div>
@@ -85,10 +88,69 @@
             <div class="avatar-label">Sophie</div>
           </div>
           <button class="appointment-more" type="button">Voir plus</button>
+          </div>
         </div>
       </div>
     </div>
   </main>
+
+  <section class="modal-backdrop is-hidden" data-event-modal aria-hidden="true">
+    <div
+      class="event-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="event-modal-title"
+    >
+      <div class="event-modal-head">
+        <div>
+          <div class="event-modal-kicker">Nouveau rendez-vous</div>
+          <h2 id="event-modal-title">Ajouter un evenement</h2>
+        </div>
+        <button class="event-close-btn" type="button" data-close-event-modal aria-label="Fermer">
+          &times;
+        </button>
+      </div>
+
+      <form class="event-form" data-event-form>
+        <label class="form-field">
+          <span class="form-label">Titre</span>
+          <input class="form-input" type="text" name="title" placeholder="Ex. Appeler Sophie" required />
+        </label>
+
+        <div class="form-row">
+          <label class="form-field">
+            <span class="form-label">Heure</span>
+            <input class="form-input" type="time" name="time" required />
+          </label>
+
+          <label class="form-field">
+            <span class="form-label">Lieu</span>
+            <input class="form-input" type="text" name="location" placeholder="Ex. Maison" />
+          </label>
+        </div>
+
+        <label class="form-field">
+          <span class="form-label">Personne</span>
+          <input class="form-input" type="text" name="person" placeholder="Ex. Sophie" />
+        </label>
+
+        <label class="form-field">
+          <span class="form-label">Note</span>
+          <textarea class="form-textarea" name="note" rows="4" placeholder="Ajouter un detail utile..."></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button class="form-btn form-btn-secondary" type="button" data-close-event-modal>
+            Annuler
+          </button>
+          <button class="form-btn form-btn-primary" type="submit">
+            Enregistrer
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
   <nav class="floating-nav" aria-label="Navigation principale">
   <a class="fnav-btn" href="../home/home.html" title="Accueil" aria-label="Accueil">
     <span class="fnav-icon-wrap">
@@ -146,6 +208,7 @@
   </a>
 </nav>
   <script src="../nav/nav.js"></script>
+  <script src="./calendar.js"></script>
 </body>
 </html>
 
