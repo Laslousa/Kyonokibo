@@ -352,9 +352,10 @@ a {
 .events-counter {
   min-width: 64px;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--muted);
+  margin-top: 10px;
 }
 
 .modal-backdrop {
