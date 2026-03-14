@@ -6,6 +6,17 @@
   padding: 0;
 }
 
+html,
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 body {
   font-family: "DM Sans", sans-serif;
   background: url("../public/images/background3.png") center center / cover
@@ -59,8 +70,9 @@ body::after {
 .main {
   position: relative;
   z-index: 1;
+  height: 100%;
   width: 100%;
-  max-width: 620px;
+  max-width: 920px;
   padding: 0 18px 110px;
   display: flex;
   flex-direction: column;
@@ -80,7 +92,7 @@ body::after {
 }
 
 .eyebrow {
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
@@ -90,7 +102,7 @@ body::after {
 
 .page-title {
   font-family: "Playfair Display", serif;
-  font-size: 26px;
+  font-size: 36px;
   font-weight: 700;
   color: #2d3748;
   line-height: 1.2;
@@ -158,6 +170,7 @@ body::after {
   overflow: hidden;
   box-shadow: 0 8px 40px rgba(80, 80, 100, 0.12);
   border: 1.5px solid #f0f0f0;
+  width: 100%;
 }
 
 .img-wrap {
@@ -187,7 +200,7 @@ body::after {
   border-radius: 100px;
   background: rgba(123, 167, 188, 0.9);
   color: #fff;
-  font-size: 12px;
+  font-size: 17px;
   font-weight: 700;
   letter-spacing: 0.5px;
   box-shadow: 0 4px 12px rgba(123, 167, 188, 0.5);
@@ -199,7 +212,7 @@ body::after {
 
 .q-text {
   font-family: "Playfair Display", serif;
-  font-size: 21px;
+  font-size: 26px;
   font-weight: 700;
   color: #2d3748;
   line-height: 1.35;
@@ -218,9 +231,13 @@ body::after {
 
 .answers {
   padding: 0 16px 16px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
+}
+
+.answers .ans-btn:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 .ans-btn {
@@ -319,11 +336,21 @@ body::after {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: linear-gradient(135deg, #7ba7bc, #7ba7bcbb);
+  background: linear-gradient(135deg, #39b8f3, #5aa4c6bb);
   box-shadow: 0 8px 24px rgba(123, 167, 188, 0.4);
   transition: all 0.2s;
 }
 
 .next-btn:hover {
   transform: translateY(-2px);
+}
+
+@media (max-width: 720px) {
+  .answers {
+    grid-template-columns: 1fr;
+  }
+
+  .answers .ans-btn:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
 }
