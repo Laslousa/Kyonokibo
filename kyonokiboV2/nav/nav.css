@@ -86,7 +86,7 @@
 }
 
 .fnav-label {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
   letter-spacing: 0.01em;
   white-space: nowrap;
@@ -116,18 +116,6 @@
   line-height: 1;
 }
 
-/* @keyframes fnav-pop-in {
-  from {
-    opacity: 0;
-    transform: translateX(-50%) translateY(20px) scale(0.95);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0) scale(1);
-  }
-} */
-
 @media (max-width: 720px) {
   .floating-nav {
     width: calc(100% - 24px);
@@ -140,11 +128,11 @@
   }
 
   .fnav-icon {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
   }
 
   .fnav-label {
-    font-size: 11px;
+    font-size: 13px;
   }
 }
