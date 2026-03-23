@@ -104,20 +104,38 @@
     modalWrapper.innerHTML = `
       <section class="settings-pin-modal" role="dialog" aria-modal="true" aria-labelledby="settings-pin-title">
         <button class="settings-pin-close" type="button" aria-label="Fermer">&times;</button>
-        <h2 id="settings-pin-title">Accès aux paramètres</h2>
-        <p class="settings-pin-text">Entrez le code de sécurité à 6 chiffres.</p>
+        <h2 id="settings-pin-title">Acc&egrave;s aux param&egrave;tres</h2>
+        <p class="settings-pin-text">Entrez le code de s&eacute;curit&eacute; &agrave; 6 chiffres.</p>
         <form class="settings-pin-form" novalidate>
-          <input
-            class="settings-pin-input"
-            type="password"
-            inputmode="numeric"
-            autocomplete="one-time-code"
-            maxlength="6"
-            pattern="\\d{6}"
-            placeholder="000000"
-            aria-label="Code de securite a 6 chiffres"
-            required
-          />
+          <div class="settings-pin-input-wrap">
+            <input
+              class="settings-pin-input"
+              type="password"
+              inputmode="numeric"
+              autocomplete="one-time-code"
+              maxlength="6"
+              pattern="\\d{6}"
+              placeholder="000000"
+              aria-label="Code de securite a 6 chiffres"
+              required
+            />
+            <button
+              class="settings-pin-toggle"
+              type="button"
+              aria-label="Afficher le code"
+              aria-pressed="false"
+            >
+              <svg class="icon-eye" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z"></path>
+                <circle cx="12" cy="12" r="3.2"></circle>
+              </svg>
+              <svg class="icon-eye-off" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z"></path>
+                <circle cx="12" cy="12" r="3.2"></circle>
+                <path d="M4 4l16 16"></path>
+              </svg>
+            </button>
+          </div>
           <p class="settings-pin-error" aria-live="polite"></p>
           <div class="settings-pin-actions">
             <button class="settings-pin-btn is-muted" type="button">Annuler</button>
@@ -133,25 +151,36 @@
     const input = modalWrapper.querySelector('.settings-pin-input');
     const form = modalWrapper.querySelector('.settings-pin-form');
     const error = modalWrapper.querySelector('.settings-pin-error');
+    const toggleButton = modalWrapper.querySelector('.settings-pin-toggle');
     const cancelButton = modalWrapper.querySelector(
       '.settings-pin-btn.is-muted'
     );
-
-    closeButton.addEventListener('click', () => {
-      closeSettingsPinModal({
-        backdrop: modalWrapper,
-        input,
-        error
-      });
-    });
-
-    return {
+    const modalRefs = {
       backdrop: modalWrapper,
       form,
       input,
       error,
+      toggleButton,
       cancelButton
     };
+
+    toggleButton.addEventListener('click', () => {
+      const isHidden = input.type === 'password';
+      input.type = isHidden ? 'text' : 'password';
+      toggleButton.classList.toggle('is-visible', isHidden);
+      toggleButton.setAttribute(
+        'aria-label',
+        isHidden ? 'Masquer le code' : 'Afficher le code'
+      );
+      toggleButton.setAttribute('aria-pressed', String(isHidden));
+      input.focus();
+    });
+
+    closeButton.addEventListener('click', () => {
+      closeSettingsPinModal(modalRefs);
+    });
+
+    return modalRefs;
   }
 
   function openSettingsPinModal(modal) {
@@ -171,8 +200,14 @@
 
   function clearSettingsPinState(modal) {
     modal.input.value = '';
+    modal.input.type = 'password';
     modal.input.classList.remove('has-error');
     modal.error.textContent = '';
+    if (modal.toggleButton) {
+      modal.toggleButton.classList.remove('is-visible');
+      modal.toggleButton.setAttribute('aria-label', 'Afficher le code');
+      modal.toggleButton.setAttribute('aria-pressed', 'false');
+    }
   }
 
   function setSettingsPinError(modal, message) {
